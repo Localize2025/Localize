@@ -1,133 +1,139 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Med Touch</title>
-    <style>
-        /* Il tuo stile esistente per la pagina */
-        body {
-            font-family: 'Segoe UI', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f8f9fa;
-            text-align: center;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Med Touch</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f9fa;
+      text-align: center;
+    }
 
-        h1 {
-            color: #2bbbad;
-            font-size: 3rem;
-        }
+    h1 {
+      color: #2bbbad;
+      font-size: 3rem;
+    }
 
-        .button {
-            background-color: #2bbbad;
-            color: white;
-            padding: 1rem 1.5rem;
-            border-radius: 8px;
-            font-weight: bold;
-            text-decoration: none;
-        }
+    .button {
+      background-color: #2bbbad;
+      color: white;
+      padding: 1rem 1.5rem;
+      border-radius: 8px;
+      font-weight: bold;
+      text-decoration: none;
+      display: inline-block;
+      margin: 1rem auto;
+    }
 
-        .button:hover {
-            background-color: #239e95;
-        }
+    .button:hover {
+      background-color: #239e95;
+    }
 
-        .payment-option {
-            margin: 20px 0;
-            padding: 1.5rem;
-            background-color: white;
-            border-radius: 12px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            width: 80%;
-            max-width: 400px;
-            margin-left: auto;
-            margin-right: auto;
-        }
+    .button-green {
+      background-color: #2ec4b6;
+    }
 
-        /* Aggiungere uno spazio per i bottoni di pagamento */
-        #pagamenti {
-            margin-top: 50px;
-        }
+    .payment-option {
+      margin: 20px auto;
+      padding: 1.5rem;
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 80%;
+      max-width: 400px;
+    }
 
-        /* Stile modulo iscrizione */
-        form {
-            background-color: #ffffff;
-            padding: 2rem;
-            margin-top: 50px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
+    form {
+      background-color: #ffffff;
+      padding: 2rem;
+      margin-top: 50px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
 
-        form input {
-            padding: 10px;
-            margin: 10px 0;
-            width: 100%;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-        }
+    form input {
+      padding: 10px;
+      margin: 10px 0;
+      width: 100%;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+    }
 
-        form button {
-            background-color: #2bbbad;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 8px;
-            font-weight: bold;
-            width: 100%;
-        }
+    form button {
+      background-color: #2bbbad;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      width: 100%;
+    }
 
-        form button:hover {
-            background-color: #239e95;
-        }
-    </style>
+    form button:hover {
+      background-color: #239e95;
+    }
+  </style>
 </head>
 <body>
 
-    <h1>Benvenuto su Med Touch</h1>
-    <p>Un servizio medico disponibile H 24/7 giorni su 7</p>
+  <h1>Med Touch</h1>
+  <p>Un parere medico sempre con T<br>Servizio H24 / 7 giorni su 7</p>
 
-    <!-- Modulo di iscrizione -->
-    <section id="iscrizione">
-        <h2>Iscriviti ora</h2>
-        <form action="submit_form.php" method="post">
-            <input type="text" name="nome" placeholder="Nome" required>
-            <input type="text" name="cognome" placeholder="Cognome" required>
-            <input type="date" name="data_nascita" required>
-            <input type="text" name="citta_residenza" placeholder="Città di residenza" required>
-            <input type="text" name="indirizzo" placeholder="Indirizzo" required>
-            <input type="tel" name="numero_cellulare" placeholder="Numero di cellulare" required>
-            <input type="email" name="email" placeholder="Email" required>
-            <input type="text" name="whatsapp" placeholder="WhatsApp" required>
-            <button type="submit">Iscriviti</button>
-        </form>
-    </section>
+  <!-- Call to action -->
+  <a href="#contatto" class="button button-green">Chiedi al medico via Telegram, Chat o Email</a>
 
-    <!-- Sezione di pagamento - Abbonamenti -->
-    <section id="pagamenti" style="margin-top: 50px;">
-        <h2>Abbonamenti Med Touch</h2>
-        <p>Scegli il piano che meglio si adatta alle tue esigenze. I pagamenti sono sicuri tramite Stripe.</p>
+  <!-- Modulo iscrizione -->
+  <section id="iscrizione">
+    <h2>Modulo di iscrizione</h2>
+    <form action="https://formspree.io/f/moqgygdv" method="POST">
+      <input type="text" name="nome" placeholder="Nome" required>
+      <input type="text" name="cognome" placeholder="Cognome" required>
+      <input type="date" name="data_nascita" required>
+      <input type="text" name="citta_residenza" placeholder="Città di residenza" required>
+      <input type="text" name="indirizzo" placeholder="Indirizzo" required>
+      <input type="tel" name="numero_cellulare" placeholder="Numero di cellulare" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <input type="text" name="whatsapp" placeholder="WhatsApp" required>
+      <button type="submit">Invia e procedi al pagamento</button>
+    </form>
+  </section>
 
-        <div class="payment-option">
-            <h3>Pareri scritti illimitati</h3>
-            <p>€20 al mese</p>
-            <a class="button" href="https://buy.stripe.com/8wM6rGgEydKn5BSeUW" target="_blank">Abbonati ora</a>
-        </div>
+  <!-- Pagamenti -->
+  <section id="pagamenti">
+    <h2>Abbonamenti Med Touch</h2>
+    <div class="payment-option">
+      <h3>Pareri scritti illimitati</h3>
+      <p>€20 al mese</p>
+      <a class="button" href="https://buy.stripe.com/8wM6rGgEydKn5BSeUW" target="_blank">Abbonati ora</a>
+    </div>
 
-        <div class="payment-option">
-            <h3>Scritti + Video + Prescrizioni</h3>
-            <p>€70 al mese</p>
-            <a class="button" href="https://buy.stripe.com/aEUaHW4VQ21F9S8147" target="_blank">Abbonati ora</a>
-        </div>
+    <div class="payment-option">
+      <h3>Scritti + Video + Prescrizioni</h3>
+      <p>€70 al mese</p>
+      <a class="button" href="https://buy.stripe.com/aEUaHW4VQ21F9S8147" target="_blank">Abbonati ora</a>
+    </div>
 
-        <div class="payment-option">
-            <h3>Abbonamento annuale completo</h3>
-            <p>€200 all'anno</p>
-            <a class="button" href="https://buy.stripe.com/fZe9DSdsm6hV3tKdQU" target="_blank">Abbonati ora</a>
-        </div>
-    </section>
+    <div class="payment-option">
+      <h3>Abbonamento annuale completo</h3>
+      <p>€200 all'anno</p>
+      <a class="button" href="https://buy.stripe.com/fZe9DSdsm6hV3tKdQU" target="_blank">Abbonati ora</a>
+    </div>
+  </section>
+
+  <!-- Contatto -->
+  <section id="contatto">
+    <h2>Contatta il medico</h2>
+    <a class="button" style="background-color:#25d366;" href="https://wa.me/393515503904" target="_blank">WhatsApp</a>
+    <a class="button" style="background-color:#0088cc;" href="https://t.me/AnnaMyself" target="_blank">Telegram</a>
+    <a class="button" style="background-color:#ea4335;" href="mailto:ferriam78@gmail.com">Email</a>
+  </section>
 
 </body>
 </html>
