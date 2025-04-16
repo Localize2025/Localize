@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Iscrizione – Med Touch</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', 'Roboto', sans-serif;
+      background-color: #f8f9fa;
+      color: #222;
+      padding: 2rem;
+      max-width: 600px;
+      margin: auto;
+    }
+    h1 {
+      text-align: center;
+      color: #2bbbad;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    input {
+      padding: 0.8rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+    button {
+      background-color: #2bbbad;
+      color: white;
+      padding: 1rem;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #239e95;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Modulo di Iscrizione</h1>
+  <form action="index.html">
+    <input type="text" name="nome" placeholder="Nome" required />
+    <input type="text" name="cognome" placeholder="Cognome" required />
+    <input type="date" name="data_nascita" placeholder="Data di nascita" required />
+    <input type="text" name="citta" placeholder="Città di residenza" required />
+    <input type="text" name="indirizzo" placeholder="Indirizzo" required />
+    <input type="tel" name="telefono" placeholder="Numero di cellulare" required />
+    <input type="email" name="email" placeholder="Email" required />
+    <input type="text" name="whatsapp" placeholder="Numero WhatsApp" required />
+    <button type="submit">Procedi al pagamento</button>
+  </form>
+
+</body>
+</html>
