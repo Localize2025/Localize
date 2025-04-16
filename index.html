@@ -1,110 +1,85 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Med Touch</title>
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', 'Roboto', sans-serif;
-      background-color: #ffffff;
-      color: #222;
-      text-align: center;
-      padding: 2rem;
-    }
-    h1 {
-      font-size: 3rem;
-      font-weight: bold;
-      margin-bottom: 0.3rem;
-    }
-    h2 {
-      font-size: 1.4rem;
-      color: #444;
-      font-weight: normal;
-      margin-top: 0;
-    }
-    h3 {
-      font-size: 1.1rem;
-      color: #555;
-      margin-bottom: 2rem;
-    }
-    .cta {
-      background-color: #0066cc;
-      color: white;
-      padding: 1rem 2rem;
-      margin: 1rem auto;
-      border: none;
-      border-radius: 12px;
-      font-size: 1.2rem;
-      cursor: pointer;
-      width: fit-content;
-      display: block;
-      text-decoration: none;
-      transition: background-color 0.3s ease;
-    }
-    .cta:hover {
-      background-color: #004d99;
-    }
-    .cta.contatto {
-      background-color: #2bbbad;
-    }
-    .cta.contatto:hover {
-      background-color: #239e95;
-    }
-    .cta.cta-main {
-      background-color: #2bbbad;
-      font-size: 1.4rem;
-      padding: 1.2rem 2.5rem;
-    }
-    .cta.cta-main:hover {
-      background-color: #239e95;
-    }
-    .sottotitolo {
-      font-size: 1rem;
-      color: #666;
-      margin-top: 0.5rem;
-      margin-bottom: 2rem;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Med Touch</title>
+    <style>
+        /* Il tuo stile esistente per la pagina */
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            text-align: center;
+        }
+
+        h1 {
+            color: #2bbbad;
+            font-size: 3rem;
+        }
+
+        .button {
+            background-color: #2bbbad;
+            color: white;
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .button:hover {
+            background-color: #239e95;
+        }
+
+        .payment-option {
+            margin: 20px 0;
+            padding: 1.5rem;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Aggiungere uno spazio per i bottoni di pagamento */
+        #pagamenti {
+            margin-top: 50px;
+        }
+    </style>
 </head>
 <body>
-  <h1>Med Touch</h1>
-  <h2>Un parere medico sempre con Te</h2>
-  <h3>Servizio H24 / 7 giorni su 7</h3>
 
-  <button class="cta" onclick="location.href='https://buy.stripe.com/link-base'">
-    Abbonamento Base – 20€/mese<br>
-    Pareri medici scritti sempre a tua disposizione, illimitati via Telegram, via WhatsApp o email
-  </button>
+    <h1>Benvenuto su Med Touch</h1>
+    <p>Un servizio medico professionale, disponibile 24/7</p>
 
-  <button class="cta" onclick="location.href='https://buy.stripe.com/link-premium'">
-    Premium – 70€/mese<br>
-    Pareri scritti + videoconsulti e prescrizioni illimitate full time h 24 e 7 giorni su 7
-  </button>
+    <!-- Altri contenuti della tua pagina -->
 
-  <button class="cta" onclick="location.href='https://buy.stripe.com/link-annuale'">
-    Annuale – 200€/anno<br>
-    Tutto incluso H24: scritti + video + prescrizioni illimitate
-  </button>
+    <!-- Sezione di pagamento - Abbonamenti -->
+    <section id="pagamenti" style="margin-top: 50px;">
+        <h2>Abbonamenti Med Touch</h2>
+        <p>Scegli il piano che meglio si adatta alle tue esigenze. I pagamenti sono sicuri tramite Stripe.</p>
 
-  <!-- Bottone principale -->
-  <div style="margin-top: 3rem;">
-    <button class="cta cta-main" onclick="location.href='iscrizione.html'">
-  Chiedi al medico attraverso Telegram, Chat e Email
-</button>
-      Chiedi al medico attraverso Telegram, Chat e Email
-    </button>
-    <div class="sottotitolo">Ricevi assistenza direttamente via WhatsApp, Telegram o Email.</div>
+        <div class="payment-option">
+            <h3>Pareri scritti illimitati</h3>
+            <p>€20 al mese</p>
+            <a class="button" href="https://buy.stripe.com/8wM6rGgEydKn5BSeUW" target="_blank">Abbonati ora</a>
+        </div>
 
-    <div id="contatti" style="display: none; margin-top: 1.5rem;">
-      <a href="https://wa.me/393515503904" target="_blank" class="cta contatto">Contatta via WhatsApp</a><br>
-      <a href="https://t.me/AnnaMyself" target="_blank" class="cta contatto">Contatta su Telegram</a><br>
-      <a href="mailto:ferriam78@gmail.com" class="cta contatto">Invia una Email</a>
-    </div>
-  </div>
+        <div class="payment-option">
+            <h3>Scritti + Video + Prescrizioni</h3>
+            <p>€70 al mese</p>
+            <a class="button" href="https://buy.stripe.com/aEUaHW4VQ21F9S8147" target="_blank">Abbonati ora</a>
+        </div>
+
+        <div class="payment-option">
+            <h3>Abbonamento annuale completo</h3>
+            <p>€200 all'anno</p>
+            <a class="button" href="https://buy.stripe.com/fZe9DSdsm6hV3tKdQU" target="_blank">Abbonati ora</a>
+        </div>
+    </section>
+
 </body>
 </html>
