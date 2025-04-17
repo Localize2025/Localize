@@ -3,97 +3,140 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Medico online</title>
+  <title>Medico Online</title>
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f8f9fa;
+      background: #f4f8fb;
+      color: #333;
+    }
+
+    header {
+      background-color: #ffffff;
+      padding: 1.5rem 2rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
       text-align: center;
     }
 
-    h1 {
-      color: #2bbbad;
-      font-size: 3rem;
+    header h1 {
+      margin: 0;
+      color: #00796b;
+      font-size: 2.5rem;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 3rem 1rem;
+      background: linear-gradient(to bottom, #e0f2f1, #ffffff);
+    }
+
+    .hero p {
+      font-size: 1.3rem;
+      margin-top: 1rem;
     }
 
     .button {
-      background-color: #2bbbad;
+      background-color: #00796b;
       color: white;
       padding: 1rem 1.5rem;
       border-radius: 8px;
       font-weight: bold;
       text-decoration: none;
       display: inline-block;
-      margin: 1rem auto;
+      margin: 1.5rem auto;
+      transition: background-color 0.3s;
     }
 
     .button:hover {
-      background-color: #239e95;
+      background-color: #004d40;
     }
 
-    .button-green {
-      background-color: #2ec4b6;
+    .section {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
     }
 
     .payment-option {
-      margin: 20px auto;
-      padding: 1.5rem;
       background-color: white;
+      margin: 1rem 0;
+      padding: 1.5rem;
       border-radius: 12px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      width: 80%;
-      max-width: 400px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      text-align: center;
     }
 
     form {
-      background-color: #ffffff;
+      background: white;
       padding: 2rem;
-      margin-top: 50px;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     }
 
     form input {
-      padding: 10px;
-      margin: 10px 0;
+      display: block;
       width: 100%;
-      border: 1px solid #ddd;
+      margin: 10px 0;
+      padding: 12px;
       border-radius: 8px;
+      border: 1px solid #ccc;
     }
 
     form button {
-      background-color: #2bbbad;
+      background-color: #00796b;
       color: white;
-      padding: 10px 20px;
       border: none;
+      padding: 12px;
       border-radius: 8px;
       font-weight: bold;
       width: 100%;
+      margin-top: 1rem;
     }
 
     form button:hover {
-      background-color: #239e95;
+      background-color: #004d40;
+    }
+
+    .contact-buttons a {
+      margin: 0.5rem;
+    }
+
+    footer {
+      background-color: #eceff1;
+      text-align: center;
+      padding: 2rem 1rem;
+      margin-top: 4rem;
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: #00796b;
+      margin: 0 1rem;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
 
-  <h1>Medico online</h1>
-  <p>Un parere medico ogni volta che ne hai bisogno<br>Servizio full time H24 / 7 giorni su 7</p>
+  <header>
+    <h1>Medico Online</h1>
+  </header>
 
-  <!-- Call to action -->
-  <a href="#contatto" class="button button-green">Chiedi al medico via Telegram, Chat o Email</a>
+  <div class="hero">
+    <p>Un parere medico ogni volta che ne hai bisogno<br>Servizio attivo H24 / 7 giorni su 7</p>
+    <a href="#contatto" class="button">Contatta la dottoressa</a>
+  </div>
 
-  <!-- Modulo iscrizione -->
-  <section id="iscrizione">
-    <h2>Modulo di iscrizione</h2>
+  <section class="section" id="iscrizione">
+    <h2>Modulo di Iscrizione</h2>
     <form action="https://formspree.io/f/moqgygdv" method="POST">
-  <input type="hidden" name="_redirect" value="https://restauranteybar.github.io/grazie.html">
+      <input type="hidden" name="_redirect" value="https://restauranteybar.github.io/grazie.html">
       <input type="text" name="nome" placeholder="Nome" required>
       <input type="text" name="cognome" placeholder="Cognome" required>
       <input type="date" name="data_nascita" required>
@@ -106,35 +149,41 @@
     </form>
   </section>
 
-  <!-- Pagamenti -->
-  <section id="pagamenti">
-    <h2>Abbonamenti medici</h2>
+  <section class="section" id="pagamenti">
+    <h2>Abbonamenti</h2>
     <div class="payment-option">
       <h3>Pareri scritti illimitati</h3>
       <p>€20 al mese</p>
       <a class="button" href="https://buy.stripe.com/8wM6rGgEydKn5BSeUW" target="_blank">Abbonati ora</a>
     </div>
-
     <div class="payment-option">
       <h3>Scritti + Video + Prescrizioni</h3>
       <p>€70 al mese</p>
       <a class="button" href="https://buy.stripe.com/aEUaHW4VQ21F9S8147" target="_blank">Abbonati ora</a>
     </div>
-
     <div class="payment-option">
       <h3>Abbonamento annuale completo</h3>
-      <p>€200 all'anno</p>
+      <p>€200 all’anno</p>
       <a class="button" href="https://buy.stripe.com/fZe9DSdsm6hV3tKdQU" target="_blank">Abbonati ora</a>
     </div>
   </section>
 
-  <!-- Contatto -->
-  <section id="contatto">
-    <h2>Contatta il medico ora!</h2>
-    <a class="button" style="background-color:#25d366;" href="https://wa.me/393515503904" target="_blank">WhatsApp</a>
-    <a class="button" style="background-color:#0088cc;" href="https://t.me/AnnaMyself" target="_blank">Telegram</a>
-    <a class="button" style="background-color:#ea4335;" href="mailto:ferriam78@gmail.com">Email</a>
+  <section class="section" id="contatto">
+    <h2>Contatta il medico</h2>
+    <div class="contact-buttons">
+      <a class="button" style="background-color:#25d366;" href="https://wa.me/393515503904" target="_blank">WhatsApp</a>
+      <a class="button" style="background-color:#0088cc;" href="https://t.me/AnnaMyself" target="_blank">Telegram</a>
+      <a class="button" style="background-color:#ea4335;" href="mailto:ferriam78@gmail.com">Email</a>
+    </div>
   </section>
+
+  <footer>
+    <p>&copy; 2025 Medico Online - Tutti i diritti riservati</p>
+    <p>
+      <a href="privacy.html">Privacy Policy</a> | 
+      <a href="termini.html">Termini di Servizio</a>
+    </p>
+  </footer>
 
 </body>
 </html>
