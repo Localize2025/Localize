@@ -159,6 +159,36 @@
     footer a:hover {
       text-decoration: underline;
     }
+
+    /* Cookie Banner Styles */
+    #cookie-banner {
+      background-color: #333;
+      color: white;
+      padding: 1rem;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      font-size: 0.9rem;
+      z-index: 1000;
+    }
+
+    #cookie-banner button {
+      background-color: #25d366;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      border-radius: 6px;
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+      margin-top: 1rem;
+    }
+
+    #cookie-banner button:hover {
+      background-color: #4CAF50;
+    }
+
   </style>
 </head>
 <body>
@@ -214,6 +244,25 @@
   <footer>
     &copy; 2025 Medico Online - <a href="#">Privacy Policy</a>
   </footer>
+
+  <!-- Cookie Banner -->
+  <div id="cookie-banner">
+    <p>Utilizziamo i cookie per migliorare l'esperienza utente. Continuando a navigare accetti l'uso dei cookie.</p>
+    <button id="accept-cookies">Accetta</button>
+  </div>
+
+  <script>
+    // Gestione dei Cookie
+    document.getElementById('accept-cookies').addEventListener('click', function() {
+      document.getElementById('cookie-banner').style.display = 'none';
+      localStorage.setItem('cookiesAccepted', 'true');
+    });
+
+    // Controlla se l'utente ha già accettato i cookie
+    if (localStorage.getItem('cookiesAccepted') === 'true') {
+      document.getElementById('cookie-banner').style.display = 'none';
+    }
+  </script>
 
 </body>
 </html>
