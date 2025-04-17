@@ -68,37 +68,6 @@
       text-align: center;
     }
 
-    form {
-      background: white;
-      padding: 2rem;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    }
-
-    form input {
-      display: block;
-      width: 100%;
-      margin: 10px 0;
-      padding: 12px;
-      border-radius: 8px;
-      border: 1px solid #ccc;
-    }
-
-    form button {
-      background-color: #00796b;
-      color: white;
-      border: none;
-      padding: 12px;
-      border-radius: 8px;
-      font-weight: bold;
-      width: 100%;
-      margin-top: 1rem;
-    }
-
-    form button:hover {
-      background-color: #004d40;
-    }
-
     .contact-buttons a {
       margin: 0.5rem;
     }
@@ -135,18 +104,10 @@
 
   <section class="section" id="iscrizione">
     <h2>Modulo di Iscrizione</h2>
-    <form action="https://formspree.io/f/moqgygdv" method="POST">
-      <input type="hidden" name="_redirect" value="https://restauranteybar.github.io/grazie.html">
-      <input type="text" name="nome" placeholder="Nome" required>
-      <input type="text" name="cognome" placeholder="Cognome" required>
-      <input type="date" name="data_nascita" required>
-      <input type="text" name="citta_residenza" placeholder="Città di residenza" required>
-      <input type="text" name="indirizzo" placeholder="Indirizzo" required>
-      <input type="tel" name="numero_cellulare" placeholder="Numero di cellulare" required>
-      <input type="email" name="email" placeholder="Email" required>
-      <input type="text" name="whatsapp" placeholder="WhatsApp" required>
-      <button type="submit">Invia e procedi al pagamento</button>
-    </form>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf9ZSWiDAoqDU3JGKXxkL1vYNDI_vS0BymAaOt2RZ-MFV1AgQ/viewform?embedded=true"
+      width="100%" height="900" frameborder="0" marginheight="0" marginwidth="0">
+      Caricamento in corso…
+    </iframe>
   </section>
 
   <section class="section" id="pagamenti">
@@ -180,16 +141,15 @@
   <footer>
     <p>&copy; 2025 Medico Online - Tutti i diritti riservati</p>
     <p>
-  <footer style="margin-top: 4rem; background: #e0f2f1; padding: 1rem;">
-  <p style="color: #00796b;">
-    <a href="privacy.html" style="color:#00796b; text-decoration:none;">Privacy Policy</a> |
-    <a href="termini.html" style="color:#00796b; text-decoration:none;">Termini di Servizio</a>
-  </p>
+      <a href="privacy.html">Privacy Policy</a> |
+      <a href="termini.html">Termini di Servizio</a>
+    </p>
   </footer>
-    <div id="cookie-banner" style="position: fixed; bottom: 0; width: 100%; background: #f1f1f1; padding: 1rem; text-align: center; font-size: 0.9rem; box-shadow: 0 -2px 6px rgba(0,0,0,0.1);">
-  Questo sito utilizza cookie tecnici e di terze parti. Proseguendo accetti la nostra <a href="cookie.html">Cookie Policy</a>.
-  <button onclick="document.getElementById('cookie-banner').style.display='none'" style="margin-left: 1rem; padding: 0.4rem 0.8rem;">OK</button>
-    </div>
+
+  <div id="cookie-banner" style="position: fixed; bottom: 0; width: 100%; background: #f1f1f1; padding: 1rem; text-align: center; font-size: 0.9rem; box-shadow: 0 -2px 6px rgba(0,0,0,0.1);">
+    Questo sito utilizza cookie tecnici e di terze parti. Proseguendo accetti la nostra <a href="cookie.html">Cookie Policy</a>.
+    <button onclick="document.getElementById('cookie-banner').style.display='none'" style="margin-left: 1rem; padding: 0.4rem 0.8rem;">OK</button>
+  </div>
 
 </body>
 </html>
