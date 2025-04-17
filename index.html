@@ -28,15 +28,15 @@
 
     .hero {
       text-align: center;
-      padding: 4rem 1rem;
-      background-image: url('https://images.unsplash.com/photo-1588776814546-ec7f9e763e5e?auto=format&fit=crop&w=1500&q=80');
+      padding: 3rem 1rem;
+      background-image: url('path_to_your_image.jpg');
       background-size: cover;
       background-position: center;
-      color: white;
     }
 
     .hero p {
       font-size: 1.6rem;
+      color: #ffffff;
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
       margin-top: 1rem;
     }
@@ -55,7 +55,7 @@
 
     .button:hover {
       background-color: #004d40;
-      transform: scale(1.05);
+      transform: scale(1.1);
     }
 
     .section {
@@ -80,11 +80,14 @@
 
     .payment-option h3 {
       font-size: 1.5rem;
+      font-weight: bold;
       color: #00796b;
     }
 
     .payment-option p {
       font-size: 1.2rem;
+      margin: 10px 0;
+      color: #333;
     }
 
     form {
@@ -94,7 +97,7 @@
       box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     }
 
-    form input, form button {
+    form input {
       display: block;
       width: 100%;
       margin: 10px 0;
@@ -107,7 +110,10 @@
       background-color: #00796b;
       color: white;
       border: none;
+      padding: 12px;
+      border-radius: 8px;
       font-weight: bold;
+      width: 100%;
       margin-top: 1rem;
     }
 
@@ -116,25 +122,19 @@
     }
 
     .contact-buttons a {
-      display: inline-block;
       margin: 0.5rem;
-      padding: 0.8rem 1rem;
-      border-radius: 6px;
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
     }
 
-    .contact-buttons img {
+    .contact-buttons a img {
       width: 20px;
-      vertical-align: middle;
-      margin-right: 8px;
+      margin-right: 10px;
     }
 
     footer {
       background-color: #eceff1;
       text-align: center;
       padding: 2rem 1rem;
+      margin-top: 4rem;
       font-size: 0.9rem;
     }
 
@@ -153,9 +153,13 @@
         font-size: 1.2rem;
       }
 
+      .payment-option {
+        padding: 1rem;
+      }
+
       .button {
         font-size: 1rem;
-        padding: 0.8rem 1.2rem;
+        padding: 1rem 2rem;
       }
     }
   </style>
@@ -173,8 +177,9 @@
 
   <section class="section" id="iscrizione">
     <h2>Modulo di Iscrizione</h2>
-    <form action="https://formspree.io/f/moqgygdv" method="POST">
-      <input type="hidden" name="_redirect" value="https://restauranteybar.github.io/grazie.html">
+    <form action="https://formspree.io/f/xwpldpjr" method="POST">
+      <input type="hidden" name="_subject" value="Nuova iscrizione dal sito Medico Online">
+      <input type="hidden" name="_next" value="https://restauranteybar.github.io/grazie.html">
       <input type="text" name="nome" placeholder="Nome" required>
       <input type="text" name="cognome" placeholder="Cognome" required>
       <input type="date" name="data_nascita" required>
@@ -209,14 +214,14 @@
   <section class="section" id="contatto">
     <h2>Contatta il medico</h2>
     <div class="contact-buttons">
-      <a style="background-color:#25d366;" href="https://wa.me/393515503904" target="_blank">
-        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp"> WhatsApp
+      <a class="button" style="background-color:#25d366;" href="https://wa.me/393515503904" target="_blank">
+        <img src="whatsapp-icon.png" alt="WhatsApp"> WhatsApp
       </a>
-      <a style="background-color:#0088cc;" href="https://t.me/AnnaMyself" target="_blank">
-        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram"> Telegram
+      <a class="button" style="background-color:#0088cc;" href="https://t.me/AnnaMyself" target="_blank">
+        <img src="telegram-icon.png" alt="Telegram"> Telegram
       </a>
-      <a style="background-color:#ea4335;" href="mailto:ferriam78@gmail.com">
-        <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email"> Email
+      <a class="button" style="background-color:#ea4335;" href="mailto:ferriam78@gmail.com">
+        <img src="email-icon.png" alt="Email"> Email
       </a>
     </div>
   </section>
@@ -228,6 +233,11 @@
       <a href="termini.html">Termini di Servizio</a>
     </p>
   </footer>
+
+  <div id="cookie-banner" style="position: fixed; bottom: 0; width: 100%; background: #f1f1f1; padding: 1rem; text-align: center; font-size: 0.9rem; box-shadow: 0 -2px 6px rgba(0,0,0,0.1);">
+    Questo sito utilizza cookie tecnici e di terze parti. Proseguendo accetti la nostra <a href="cookie.html">Cookie Policy</a>.
+    <button onclick="document.getElementById('cookie-banner').style.display='none'" style="margin-left: 1rem; padding: 0.4rem 0.8rem;">OK</button>
+  </div>
 
 </body>
 </html>
