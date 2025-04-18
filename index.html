@@ -6,141 +6,167 @@
   <title>Medico Online</title>
   <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      padding: 0;
-      background: #f4f8fb;
-      color: #333;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #eaf2f8;
+      color: #2c3e50;
+      scroll-behavior: smooth;
     }
 
     header {
-      background-color: #ffffff;
-      padding: 1.5rem 2rem;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      background-color: #1abc9c;
+      padding: 2rem;
       text-align: center;
+      color: white;
+      animation: fadeInDown 1s ease-out;
     }
 
     header h1 {
       margin: 0;
-      color: #00796b;
       font-size: 2.5rem;
     }
 
     .hero {
+      background: url('https://images.unsplash.com/photo-1588776814546-d7d69e2b867b?auto=format&fit=crop&w=1400&q=80') no-repeat center center/cover;
+      color: white;
       text-align: center;
-      padding: 3rem 1rem;
-      background-image: url('path_to_your_image.jpg');
-      background-size: cover;
-      background-position: center;
+      padding: 5rem 2rem;
+      animation: fadeIn 2s ease-in-out;
     }
 
     .hero p {
-      font-size: 1.6rem;
-      color: #ffffff;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      font-size: 1.5rem;
       margin-top: 1rem;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
     }
 
     .button {
-      background-color: #00796b;
+      background-color: #16a085;
       color: white;
-      padding: 1rem 1.5rem;
+      padding: 1rem 2rem;
+      margin-top: 2rem;
+      border: none;
       border-radius: 8px;
-      font-weight: bold;
+      font-size: 1rem;
       text-decoration: none;
       display: inline-block;
-      margin: 1.5rem auto;
-      transition: background-color 0.3s, transform 0.3s ease;
+      transition: background-color 0.3s;
     }
 
     .button:hover {
-      background-color: #004d40;
-      transform: scale(1.1);
+      background-color: #0e6251;
     }
 
-    .section {
+    .form-section,
+    .abbonamenti,
+    .faq,
+    .recensioni {
       max-width: 700px;
-      margin: 0 auto;
-      padding: 2rem 1rem;
-    }
-
-    .payment-option {
-      background-color: #ffffff;
-      margin: 2rem 0;
-      padding: 1.5rem;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      text-align: center;
-      transition: transform 0.3s ease;
-    }
-
-    .payment-option:hover {
-      transform: translateY(-5px);
-    }
-
-    .payment-option h3 {
-      font-size: 1.5rem;
-      font-weight: bold;
-      color: #00796b;
-    }
-
-    .payment-option p {
-      font-size: 1.2rem;
-      margin: 10px 0;
-      color: #333;
-    }
-
-    form {
-      background: white;
+      margin: 2rem auto;
       padding: 2rem;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      animation: fadeInUp 1s ease;
     }
 
-    form input {
-      display: block;
+    form input, form textarea {
       width: 100%;
-      margin: 10px 0;
       padding: 12px;
-      border-radius: 8px;
+      margin: 10px 0;
       border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
     }
 
     form button {
-      background-color: #00796b;
+      width: 100%;
+      padding: 12px;
+      background-color: #1abc9c;
       color: white;
       border: none;
-      padding: 12px;
-      border-radius: 8px;
-      font-weight: bold;
-      width: 100%;
-      margin-top: 1rem;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
     }
 
     form button:hover {
-      background-color: #004d40;
+      background-color: #148f77;
     }
 
-    .contact-buttons a {
+    .abbonamento {
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    .abbonamento a {
+      background-color: #1abc9c;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      border-radius: 6px;
+      text-decoration: none;
+      display: inline-block;
+      transition: background-color 0.3s;
+    }
+
+    .abbonamento a:hover {
+      background-color: #148f77;
+    }
+
+    .contatti-diretti {
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    .contatti-diretti a {
       margin: 0.5rem;
+      padding: 0.8rem 1.2rem;
+      border-radius: 6px;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      display: inline-block;
     }
 
-    .contact-buttons a img {
-      width: 20px;
-      margin-right: 10px;
+    .whatsapp { background-color: #2ecc71; }
+    .telegram { background-color: #3498db; }
+    .email { background-color: #e74c3c; }
+
+    .recensioni blockquote {
+      background: #fdfefe;
+      padding: 1rem;
+      border-left: 5px solid #1abc9c;
+      margin: 1rem 0;
+      font-style: italic;
+      border-radius: 8px;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid #ddd;
+      padding: 1rem 0;
+    }
+
+    .faq-question {
+      cursor: pointer;
+      font-weight: bold;
+      color: #1abc9c;
+    }
+
+    .faq-answer {
+      display: none;
+      padding-top: 0.5rem;
     }
 
     footer {
-      background-color: #eceff1;
       text-align: center;
       padding: 2rem 1rem;
-      margin-top: 4rem;
+      background-color: #d6eaf8;
       font-size: 0.9rem;
+      margin-top: 3rem;
     }
 
     footer a {
-      color: #00796b;
-      margin: 0 1rem;
+      color: #1abc9c;
       text-decoration: none;
     }
 
@@ -148,96 +174,159 @@
       text-decoration: underline;
     }
 
-    @media (max-width: 768px) {
-      .hero p {
-        font-size: 1.2rem;
-      }
+    #cookie-banner {
+      background-color: #2c3e50;
+      color: white;
+      padding: 1rem;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      font-size: 0.9rem;
+      z-index: 1000;
+    }
 
-      .payment-option {
-        padding: 1rem;
-      }
+    #cookie-banner button {
+      background-color: #2ecc71;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      border-radius: 6px;
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+      margin-top: 1rem;
+    }
 
-      .button {
-        font-size: 1rem;
-        padding: 1rem 2rem;
-      }
+    #cookie-banner button:hover {
+      background-color: #27ae60;
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
     }
   </style>
 </head>
 <body>
 
+  <!-- Hero Section -->
   <header>
     <h1>Medico Online</h1>
   </header>
 
-  <div class="hero">
-    <p>Un parere medico ogni volta che ne hai bisogno<br>Servizio attivo H24 / 7 giorni su 7</p>
-    <a href="#contatto" class="button">Contatta il medico ora</a>
-  </div>
+  <section class="hero">
+    <h2>Visite mediche online 24/7</h2>
+    <p>Parla con un medico in pochi minuti, ovunque tu sia</p>
+    <a href="#form" class="button">Prenota ora</a>
+  </section>
 
-  <section class="section" id="iscrizione">
-    <h2>Modulo di Iscrizione</h2>
-    <form action="https://formspree.io/f/xwpldpjr" method="POST">
-      <input type="hidden" name="_subject" value="Nuova iscrizione dal sito Medico Online">
-      <input type="hidden" name="_next" value="https://restauranteybar.github.io/grazie.html">
-      <input type="text" name="nome" placeholder="Nome" required>
-      <input type="text" name="cognome" placeholder="Cognome" required>
-      <input type="date" name="data_nascita" required>
-      <input type="text" name="citta_residenza" placeholder="Città di residenza" required>
-      <input type="text" name="indirizzo" placeholder="Indirizzo" required>
-      <input type="tel" name="numero_cellulare" placeholder="Numero di cellulare" required>
-      <input type="email" name="email" placeholder="Email" required>
-      <input type="text" name="whatsapp" placeholder="WhatsApp" required>
-      <button type="submit">Invia e procedi al pagamento</button>
+  <!-- Form -->
+  <section class="form-section" id="form">
+    <h2>Prenota una visita</h2>
+    <form>
+      <input type="text" placeholder="Nome" required>
+      <input type="email" placeholder="Email" required>
+      <textarea rows="5" placeholder="Descrizione del problema" required></textarea>
+      <button type="submit">Invia richiesta</button>
     </form>
   </section>
 
-  <section class="section" id="pagamenti">
+  <!-- Abbonamenti -->
+  <section class="abbonamenti" id="abbonamenti">
     <h2>Abbonamenti</h2>
-    <div class="payment-option">
-      <h3>Pareri scritti illimitati</h3>
-      <p>€20 al mese</p>
-      <a class="button" href="https://buy.stripe.com/8wM6rGgEydKn5BSeUW" target="_blank">Abbonati ora</a>
+    <div class="abbonamento">
+      <h3>Standard</h3>
+      <p>Accesso alle visite mediche online con tempi standard</p>
+      <a href="#">Attiva</a>
     </div>
-    <div class="payment-option">
-      <h3>Scritti + Video + Prescrizioni</h3>
-      <p>€70 al mese</p>
-      <a class="button" href="https://buy.stripe.com/aEUaHW4VQ21F9S8147" target="_blank">Abbonati ora</a>
-    </div>
-    <div class="payment-option">
-      <h3>Abbonamento annuale completo</h3>
-      <p>€200 all’anno</p>
-      <a class="button" href="https://buy.stripe.com/fZe9DSdsm6hV3tKdQU" target="_blank">Abbonati ora</a>
+    <div class="abbonamento">
+      <h3>Premium</h3>
+      <p>Accesso prioritario, chat illimitata con i medici</p>
+      <a href="#">Attiva</a>
     </div>
   </section>
 
-  <section class="section" id="contatto">
-    <h2>Contatta il medico</h2>
-    <div class="contact-buttons">
-      <a class="button" style="background-color:#25d366;" href="https://wa.me/393515503904" target="_blank">
-        <img src="whatsapp-icon.png" alt="WhatsApp"> WhatsApp
-      </a>
-      <a class="button" style="background-color:#0088cc;" href="https://t.me/AnnaMyself" target="_blank">
-        <img src="telegram-icon.png" alt="Telegram"> Telegram
-      </a>
-      <a class="button" style="background-color:#ea4335;" href="mailto:ferriam78@gmail.com">
-        <img src="email-icon.png" alt="Email"> Email
-      </a>
+  <!-- FAQ -->
+  <section class="faq" id="faq">
+    <h2>Domande frequenti</h2>
+    <div class="faq-item">
+      <div class="faq-question">Quanto dura una visita?</div>
+      <div class="faq-answer">In media 15-20 minuti, ma dipende dal caso.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">I medici sono certificati?</div>
+      <div class="faq-answer">Sì, tutti i nostri medici sono regolarmente iscritti all’albo.</div>
     </div>
   </section>
 
+  <!-- Recensioni -->
+  <section class="recensioni" id="recensioni">
+    <h2>Cosa dicono i pazienti</h2>
+    <blockquote>"Servizio rapido e professionale, consigliatissimo!"</blockquote>
+    <blockquote>"Ho risolto il mio problema senza uscire di casa."</blockquote>
+  </section>
+
+  <!-- Contatti -->
+  <div class="contatti-diretti">
+    <a href="https://wa.me/1234567890" class="whatsapp">WhatsApp</a>
+    <a href="https://t.me/username" class="telegram">Telegram</a>
+    <a href="mailto:info@medicoweb.it" class="email">Email</a>
+  </div>
+
+  <!-- Cookie Banner -->
+  <div id="cookie-banner">
+    Questo sito utilizza cookie per migliorare l'esperienza utente.
+    <br>
+    <button id="accept-cookies">Accetta</button>
+  </div>
+
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Medico Online - Tutti i diritti riservati</p>
-    <p>
-      <a href="privacy.html">Privacy Policy</a> | 
-      <a href="termini.html">Termini di Servizio</a>
-    </p>
+    &copy; 2025 Medico Online - <a href="#">Privacy Policy</a>
   </footer>
 
-  <div id="cookie-banner" style="position: fixed; bottom: 0; width: 100%; background: #f1f1f1; padding: 1rem; text-align: center; font-size: 0.9rem; box-shadow: 0 -2px 6px rgba(0,0,0,0.1);">
-    Questo sito utilizza cookie tecnici e di terze parti. Proseguendo accetti la nostra <a href="cookie.html">Cookie Policy</a>.
-    <button onclick="document.getElementById('cookie-banner').style.display='none'" style="margin-left: 1rem; padding: 0.4rem 0.8rem;">OK</button>
-  </div>
+  <!-- Script FAQ e Cookie -->
+  <script>
+    document.getElementById('accept-cookies').addEventListener('click', function() {
+      document.getElementById('cookie-banner').style.display = 'none';
+      localStorage.setItem('cookiesAccepted', 'true');
+    });
+
+    if (localStorage.getItem('cookiesAccepted') === 'true') {
+      document.getElementById('cookie-banner').style.display = 'none';
+    }
+
+    document.querySelectorAll('.faq-question').forEach(q => {
+      q.addEventListener('click', () => {
+        const answer = q.nextElementSibling;
+        answer.style.display = (answer.style.display === 'block') ? 'none' : 'block';
+      });
+    });
+  </script>
+
+  <!-- Live Chat (Tawk.to) -->
+  <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+      var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+      s1.async=true;
+      s1.src='https://embed.tawk.to/66211fc09a809f19fb2c3805/1hrh05t80';
+      s1.charset='UTF-8';
+      s1.setAttribute('crossorigin','*');
+      s0.parentNode.insertBefore(s1,s0);
+    })();
+  </script>
 
 </body>
 </html>
