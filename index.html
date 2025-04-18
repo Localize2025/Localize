@@ -1,220 +1,243 @@
-<!DOCTYPE html><html lang="it">
+<!DOCTYPE html>
+<html lang="it">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Medico Online</title>
   <style>
     body {
-      margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background-color: #f0f2f5;
-      color: #222;
-      scroll-behavior: smooth;
-    }header {
-  background-color: #0d47a1;
-  padding: 2rem;
-  text-align: center;
-  color: white;
-  animation: fadeInDown 1s ease-out;
-}
+      margin: 0;
+      padding: 0;
+      background: #f4f8fb;
+      color: #333;
+    }
 
-header h1 {
-  margin: 0;
-  font-size: 2.5rem;
-}
+    header {
+      background-color: #ffffff;
+      padding: 1.5rem 2rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      text-align: center;
+    }
 
-.hero {
-  background: url('https://images.unsplash.com/photo-1600965421126-e4cfbc5e8ec3?auto=format&fit=crop&w=1400&q=80') no-repeat center center/cover;
-  color: white;
-  text-align: center;
-  padding: 5rem 2rem;
-  animation: fadeIn 2s ease-in-out;
-}
+    header h1 {
+      margin: 0;
+      color: #00796b;
+      font-size: 2.5rem;
+    }
 
-.hero p {
-  font-size: 1.5rem;
-  margin-top: 1rem;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
-}
+    .hero {
+      text-align: center;
+      padding: 3rem 1rem;
+      background-image: url('path_to_your_image.jpg');
+      background-size: cover;
+      background-position: center;
+    }
 
-.button {
-  background-color: #00897b;
-  color: white;
-  padding: 1rem 2rem;
-  margin-top: 2rem;
-  border: none;
-  border-radius: 8px;
-  font-size: 1rem;
-  text-decoration: none;
-  display: inline-block;
-  transition: background-color 0.3s;
-}
+    .hero p {
+      font-size: 1.6rem;
+      color: #ffffff;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      margin-top: 1rem;
+    }
 
-.button:hover {
-  background-color: #004d40;
-}
+    .button {
+      background-color: #00796b;
+      color: white;
+      padding: 1rem 1.5rem;
+      border-radius: 8px;
+      font-weight: bold;
+      text-decoration: none;
+      display: inline-block;
+      margin: 1.5rem auto;
+      transition: background-color 0.3s, transform 0.3s ease;
+    }
 
-.form-section,
-.abbonamenti,
-.faq,
-.recensioni {
-  max-width: 700px;
-  margin: 2rem auto;
-  padding: 2rem;
-  background-color: white;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  animation: fadeInUp 1s ease;
-}
+    .button:hover {
+      background-color: #004d40;
+      transform: scale(1.1);
+    }
 
-form input, form textarea {
-  width: 100%;
-  padding: 12px;
-  margin: 10px 0;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 1rem;
-}
+    .section {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
 
-form button {
-  width: 100%;
-  padding: 12px;
-  background-color: #0d47a1;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  font-size: 1rem;
-  cursor: pointer;
-}
+    .payment-option {
+      background-color: #ffffff;
+      margin: 2rem 0;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
 
-form button:hover {
-  background-color: #002171;
-}
+    .payment-option:hover {
+      transform: translateY(-5px);
+    }
 
-.abbonamento {
-  margin-bottom: 2rem;
-  text-align: center;
-}
+    .payment-option h3 {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #00796b;
+    }
 
-.abbonamento a {
-  background-color: #00897b;
-  color: white;
-  padding: 0.8rem 1.5rem;
-  border-radius: 6px;
-  text-decoration: none;
-  display: inline-block;
-  transition: background-color 0.3s;
-}
+    .payment-option p {
+      font-size: 1.2rem;
+      margin: 10px 0;
+      color: #333;
+    }
 
-.abbonamento a:hover {
-  background-color: #00695c;
-}
+    form {
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
 
-.contatti-diretti {
-  text-align: center;
-  margin-top: 2rem;
-}
+    form input {
+      display: block;
+      width: 100%;
+      margin: 10px 0;
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
 
-.contatti-diretti a {
-  margin: 0.5rem;
-  padding: 0.8rem 1.2rem;
-  border-radius: 6px;
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-  display: inline-block;
-}
+    form button {
+      background-color: #00796b;
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 8px;
+      font-weight: bold;
+      width: 100%;
+      margin-top: 1rem;
+    }
 
-.whatsapp { background-color: #25d366; }
-.telegram { background-color: #0088cc; }
-.email { background-color: #ea4335; }
+    form button:hover {
+      background-color: #004d40;
+    }
 
-.recensioni blockquote {
-  background: #f9f9f9;
-  padding: 1rem;
-  border-left: 5px solid #00796b;
-  margin: 1rem 0;
-  font-style: italic;
-  border-radius: 8px;
-}
+    .contact-buttons a {
+      margin: 0.5rem;
+    }
 
-.faq-item {
-  border-bottom: 1px solid #ddd;
-  padding: 1rem 0;
-}
+    .contact-buttons a img {
+      width: 20px;
+      margin-right: 10px;
+    }
 
-.faq-question {
-  cursor: pointer;
-  font-weight: bold;
-  color: #0d47a1;
-}
+    footer {
+      background-color: #eceff1;
+      text-align: center;
+      padding: 2rem 1rem;
+      margin-top: 4rem;
+      font-size: 0.9rem;
+    }
 
-.faq-answer {
-  display: none;
-  padding-top: 0.5rem;
-}
+    footer a {
+      color: #00796b;
+      margin: 0 1rem;
+      text-decoration: none;
+    }
 
-footer {
-  text-align: center;
-  padding: 2rem 1rem;
-  background-color: #dde2e7;
-  font-size: 0.9rem;
-  margin-top: 3rem;
-}
+    footer a:hover {
+      text-decoration: underline;
+    }
 
-footer a {
-  color: #0d47a1;
-  text-decoration: none;
-}
+    @media (max-width: 768px) {
+      .hero p {
+        font-size: 1.2rem;
+      }
 
-footer a:hover {
-  text-decoration: underline;
-}
+      .payment-option {
+        padding: 1rem;
+      }
 
-#cookie-banner {
-  background-color: #263238;
-  color: white;
-  padding: 1rem;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  text-align: center;
-  font-size: 0.9rem;
-  z-index: 1000;
-}
-
-#cookie-banner button {
-  background-color: #25d366;
-  color: white;
-  padding: 0.8rem 1.5rem;
-  border-radius: 6px;
-  border: none;
-  cursor: pointer;
-  font-size: 1rem;
-  margin-top: 1rem;
-}
-
-#cookie-banner button:hover {
-  background-color: #4CAF50;
-}
-
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes fadeInDown {
-  from { opacity: 0; transform: translateY(-30px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
+      .button {
+        font-size: 1rem;
+        padding: 1rem 2rem;
+      }
+    }
   </style>
 </head>
 <body>
-<!-- resto invariato -->
+
+  <header>
+    <h1>Medico Online</h1>
+  </header>
+
+  <div class="hero">
+    <p>Un parere medico ogni volta che ne hai bisogno<br>Servizio attivo H24 / 7 giorni su 7</p>
+    <a href="#contatto" class="button">Contatta il medico ora</a>
+  </div>
+
+  <section class="section" id="iscrizione">
+    <h2>Modulo di Iscrizione</h2>
+    <form action="https://formspree.io/f/xwpldpjr" method="POST">
+      <input type="hidden" name="_subject" value="Nuova iscrizione dal sito Medico Online">
+      <input type="hidden" name="_next" value="https://restauranteybar.github.io/grazie.html">
+      <input type="text" name="nome" placeholder="Nome" required>
+      <input type="text" name="cognome" placeholder="Cognome" required>
+      <input type="date" name="data_nascita" required>
+      <input type="text" name="citta_residenza" placeholder="Città di residenza" required>
+      <input type="text" name="indirizzo" placeholder="Indirizzo" required>
+      <input type="tel" name="numero_cellulare" placeholder="Numero di cellulare" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <input type="text" name="whatsapp" placeholder="WhatsApp" required>
+      <button type="submit">Invia e procedi al pagamento</button>
+    </form>
+  </section>
+
+  <section class="section" id="pagamenti">
+    <h2>Abbonamenti</h2>
+    <div class="payment-option">
+      <h3>Pareri scritti illimitati</h3>
+      <p>€20 al mese</p>
+      <a class="button" href="https://buy.stripe.com/8wM6rGgEydKn5BSeUW" target="_blank">Abbonati ora</a>
+    </div>
+    <div class="payment-option">
+      <h3>Scritti + Video + Prescrizioni</h3>
+      <p>€70 al mese</p>
+      <a class="button" href="https://buy.stripe.com/aEUaHW4VQ21F9S8147" target="_blank">Abbonati ora</a>
+    </div>
+    <div class="payment-option">
+      <h3>Abbonamento annuale completo</h3>
+      <p>€200 all’anno</p>
+      <a class="button" href="https://buy.stripe.com/fZe9DSdsm6hV3tKdQU" target="_blank">Abbonati ora</a>
+    </div>
+  </section>
+
+  <section class="section" id="contatto">
+    <h2>Contatta il medico</h2>
+    <div class="contact-buttons">
+      <a class="button" style="background-color:#25d366;" href="https://wa.me/393515503904" target="_blank">
+        <img src="whatsapp-icon.png" alt="WhatsApp"> WhatsApp
+      </a>
+      <a class="button" style="background-color:#0088cc;" href="https://t.me/AnnaMyself" target="_blank">
+        <img src="telegram-icon.png" alt="Telegram"> Telegram
+      </a>
+      <a class="button" style="background-color:#ea4335;" href="mailto:ferriam78@gmail.com">
+        <img src="email-icon.png" alt="Email"> Email
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Medico Online - Tutti i diritti riservati</p>
+    <p>
+      <a href="privacy.html">Privacy Policy</a> | 
+      <a href="termini.html">Termini di Servizio</a>
+    </p>
+  </footer>
+
+  <div id="cookie-banner" style="position: fixed; bottom: 0; width: 100%; background: #f1f1f1; padding: 1rem; text-align: center; font-size: 0.9rem; box-shadow: 0 -2px 6px rgba(0,0,0,0.1);">
+    Questo sito utilizza cookie tecnici e di terze parti. Proseguendo accetti la nostra <a href="cookie.html">Cookie Policy</a>.
+    <button onclick="document.getElementById('cookie-banner').style.display='none'" style="margin-left: 1rem; padding: 0.4rem 0.8rem;">OK</button>
+  </div>
+
+</body>
+</html>
