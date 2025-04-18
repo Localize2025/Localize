@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="it">
+<!DOCTYPE html><html lang="it">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -10,330 +9,259 @@
       font-family: 'Segoe UI', sans-serif;
       background-color: #f4f8fb;
       color: #333;
-      scroll-behavior: smooth;
-    }
+    }header {
+  background-color: #00796b;
+  padding: 2rem;
+  text-align: center;
+  color: white;
+}
 
-    header {
-      background-color: #00796b;
-      padding: 2rem;
-      text-align: center;
-      color: white;
-      animation: fadeInDown 1s ease-out;
-    }
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
 
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-    }
+.hero {
+  background: url('https://images.unsplash.com/photo-1588776814546-d7d69e2b867b?auto=format&fit=crop&w=1400&q=80') no-repeat center center/cover;
+  color: #f9f9f9;
+  text-align: center;
+  padding: 5rem 2rem;
+}
 
-    .hero {
-      background: url('https://images.unsplash.com/photo-1588776814546-d7d69e2b867b?auto=format&fit=crop&w=1400&q=80') no-repeat center center/cover;
-      color: white;
-      text-align: center;
-      padding: 5rem 2rem;
-      animation: fadeIn 2s ease-in-out;
-    }
+.hero p {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+  animation: fadeInUp 1s ease forwards;
+}
 
-    .hero p {
-      font-size: 1.5rem;
-      margin-top: 1rem;
-      text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
-    }
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
-    .button {
-      background-color: #004d40;
-      color: white;
-      padding: 1rem 2rem;
-      margin-top: 2rem;
-      border: none;
-      border-radius: 8px;
-      font-size: 1rem;
-      text-decoration: none;
-      display: inline-block;
-      transition: background-color 0.3s;
-    }
+.button {
+  background-color: #004d40;
+  color: white;
+  padding: 1rem 2rem;
+  margin-top: 2rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s, transform 0.3s;
+}
 
-    .button:hover {
-      background-color: #002f2f;
-    }
+.button:hover {
+  background-color: #002f2f;
+  transform: scale(1.05);
+}
 
-    .form-section,
-    .abbonamenti,
-    .faq,
-    .recensioni {
-      max-width: 700px;
-      margin: 2rem auto;
-      padding: 2rem;
-      background-color: white;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-      animation: fadeInUp 1s ease;
-    }
+.form-section, .abbonamenti, .faq-section, .recensioni-section {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  animation: fadeInUp 1s ease;
+}
 
-    form input, form textarea {
-      width: 100%;
-      padding: 12px;
-      margin: 10px 0;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      font-size: 1rem;
-    }
+form input, form textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
 
-    form button {
-      width: 100%;
-      padding: 12px;
-      background-color: #00796b;
-      color: white;
-      border: none;
-      border-radius: 6px;
-      font-size: 1rem;
-      cursor: pointer;
-    }
+form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #00796b;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+}
 
-    form button:hover {
-      background-color: #004d40;
-    }
+form button:hover {
+  background-color: #004d40;
+}
 
-    .abbonamento {
-      margin-bottom: 2rem;
-      text-align: center;
-    }
+.abbonamenti h3 {
+  color: #00796b;
+  margin-bottom: 1rem;
+}
 
-    .abbonamento a {
-      background-color: #00796b;
-      color: white;
-      padding: 0.8rem 1.5rem;
-      border-radius: 6px;
-      text-decoration: none;
-      display: inline-block;
-      transition: background-color 0.3s;
-    }
+.abbonamento {
+  margin-bottom: 2rem;
+  text-align: center;
+}
 
-    .abbonamento a:hover {
-      background-color: #004d40;
-    }
+.abbonamento a {
+  background-color: #00796b;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 6px;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s;
+}
 
-    .contatti-diretti {
-      text-align: center;
-      margin-top: 2rem;
-    }
+.abbonamento a:hover {
+  background-color: #004d40;
+}
 
-    .contatti-diretti a {
-      margin: 0.5rem;
-      padding: 0.8rem 1.2rem;
-      border-radius: 6px;
-      text-decoration: none;
-      color: white;
-      font-weight: bold;
-      display: inline-block;
-    }
+.faq-section h3, .recensioni-section h3 {
+  color: #00796b;
+}
 
-    .whatsapp { background-color: #25d366; }
-    .telegram { background-color: #0088cc; }
-    .email { background-color: #ea4335; }
+.faq {
+  margin: 1rem 0;
+}
 
-    .recensioni blockquote {
-      background: #f9f9f9;
-      padding: 1rem;
-      border-left: 5px solid #00796b;
-      margin: 1rem 0;
-      font-style: italic;
-      border-radius: 8px;
-    }
+.faq button {
+  width: 100%;
+  background: #f4f8fb;
+  border: 1px solid #ccc;
+  padding: 1rem;
+  text-align: left;
+  font-size: 1rem;
+  cursor: pointer;
+}
 
-    .faq-item {
-      border-bottom: 1px solid #ddd;
-      padding: 1rem 0;
-    }
+.faq-content {
+  padding: 1rem;
+  display: none;
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-top: none;
+}
 
-    .faq-question {
-      cursor: pointer;
-      font-weight: bold;
-      color: #00796b;
-    }
+.recensione {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background: #f1f1f1;
+  border-left: 4px solid #00796b;
+  border-radius: 6px;
+}
 
-    .faq-answer {
-      display: none;
-      padding-top: 0.5rem;
-    }
+.recensione strong {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #004d40;
+}
 
-    footer {
-      text-align: center;
-      padding: 2rem 1rem;
-      background-color: #eceff1;
-      font-size: 0.9rem;
-      margin-top: 3rem;
-    }
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: #eceff1;
+  font-size: 0.9rem;
+  margin-top: 3rem;
+}
 
-    footer a {
-      color: #00796b;
-      text-decoration: none;
-    }
+footer a {
+  color: #00796b;
+  text-decoration: none;
+}
 
-    footer a:hover {
-      text-decoration: underline;
-    }
+footer a:hover {
+  text-decoration: underline;
+}
 
-    #cookie-banner {
-      background-color: #333;
-      color: white;
-      padding: 1rem;
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      text-align: center;
-      font-size: 0.9rem;
-      z-index: 1000;
-    }
-
-    #cookie-banner button {
-      background-color: #25d366;
-      color: white;
-      padding: 0.8rem 1.5rem;
-      border-radius: 6px;
-      border: none;
-      cursor: pointer;
-      font-size: 1rem;
-      margin-top: 1rem;
-    }
-
-    #cookie-banner button:hover {
-      background-color: #4CAF50;
-    }
-
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes fadeInDown {
-      from { opacity: 0; transform: translateY(-30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
   </style>
 </head>
 <body>
-
   <header>
     <h1>Medico Online</h1>
-  </header>
-
-  <div class="hero">
+  </header>  <div class="hero">
     <p>Ricevi un parere medico ovunque tu sia<br>Servizio attivo 24/7</p>
     <a href="#contatto" class="button">Contatta il medico ora</a>
-  </div>
-
-  <section class="form-section" id="contatto">
+  </div>  <section class="form-section" id="contatto">
     <h2>Modulo di contatto</h2>
-    <form action="https://formspree.io/f/xwpldpjr" method="POST">
+    <form action="#" method="POST">
       <input type="text" name="nome" placeholder="Nome e Cognome" required>
       <input type="email" name="email" placeholder="La tua Email" required>
       <input type="tel" name="telefono" placeholder="Numero di telefono (opzionale)">
       <textarea name="messaggio" rows="5" placeholder="Scrivi il tuo messaggio qui..." required></textarea>
       <button type="submit">Invia Richiesta</button>
     </form>
-
-    <div class="contatti-diretti">
-      <a href="https://wa.me/393515503904" class="whatsapp" target="_blank">WhatsApp</a>
-      <a href="https://t.me/AnnaMyself" class="telegram" target="_blank">Telegram</a>
-      <a href="mailto:ferriam78@gmail.com" class="email" target="_blank">Email</a>
-    </div>
-  </section>
-
-  <section class="abbonamenti">
+  </section>  <section class="abbonamenti">
     <h3>Abbonamenti disponibili</h3>
-
     <div class="abbonamento">
       <h4>Pareri scritti illimitati</h4>
       <p>€20 al mese</p>
-      <a href="https://buy.stripe.com/8wM6rGgEydKn5BSeUW" target="_blank">Abbonati ora</a>
+      <a href="#">Abbonati ora</a>
     </div>
-
     <div class="abbonamento">
       <h4>Scritti + Video + Prescrizioni</h4>
       <p>€70 al mese</p>
-      <a href="https://buy.stripe.com/aEUaHW4VQ21F9S8147" target="_blank">Abbonati ora</a>
+      <a href="#">Abbonati ora</a>
     </div>
-
     <div class="abbonamento">
       <h4>Abbonamento annuale completo</h4>
       <p>€200 all’anno</p>
-      <a href="https://buy.stripe.com/fZe9DSdsm6hV3tKdQU" target="_blank">Abbonati ora</a>
+      <a href="#">Abbonati ora</a>
     </div>
-  </section>
-
-  <section class="recensioni">
-    <h3>Cosa dicono i nostri utenti</h3>
-    <blockquote>"Servizio velocissimo e preciso! Mi sono sentita ascoltata."</blockquote>
-    <blockquote>"Ottimo supporto medico anche nel weekend. Molto utile!"</blockquote>
-    <blockquote>"Consulenza ricevuta in meno di un'ora, super!"</blockquote>
-  </section>
-
-  <section class="faq">
-    <h3>Domande Frequenti (FAQ)</h3>
-
-    <div class="faq-item"><div class="faq-question">Quanto tempo serve per ricevere una risposta?</div><div class="faq-answer">Di solito rispondiamo entro 1-2 ore, massimo 12h nei momenti più intensi.</div></div>
-
-    <div class="faq-item"><div class="faq-question">È un servizio legale?</div><div class="faq-answer">Sì, il servizio è conforme alla normativa italiana sulla consulenza sanitaria online.</div></div>
-
-    <div class="faq-item"><div class="faq-question">Come funziona il pagamento?</div><div class="faq-answer">Puoi pagare in modo sicuro tramite Stripe con carta di credito o debito.</div></div>
-
-    <div class="faq-item"><div class="faq-question">Posso disdire l’abbonamento?</div><div class="faq-answer">Sì, puoi cancellare in qualsiasi momento dalla tua area personale o contattandoci direttamente.</div></div>
-
-    <div class="faq-item"><div class="faq-question">Posso allegare documenti o foto?</div><div class="faq-answer">Certo, puoi inviarci referti, foto o qualsiasi file utile alla valutazione medica.</div></div>
-
-    <div class="faq-item"><div class="faq-question">È adatto anche ai bambini?</div><div class="faq-answer">Sì, offriamo pareri anche per problematiche pediatriche. Specifica l’età nel messaggio.</div></div>
-
-    <div class="faq-item"><div class="faq-question">È un servizio sostitutivo del medico curante?</div><div class="faq-answer">No, il nostro servizio è complementare. Per emergenze o visite fisiche contatta sempre il tuo medico.</div></div>
-  </section>
-
-  <footer>
+  </section>  <section class="faq-section">
+    <h3>Domande Frequenti</h3>
+    <div class="faq">
+      <button onclick="toggleFAQ(this)">Come funziona il servizio?</button>
+      <div class="faq-content">Compila il modulo, riceverai una risposta personalizzata entro poche ore.</div>
+    </div>
+    <div class="faq">
+      <button onclick="toggleFAQ(this)">Che tipi di prestazioni sono incluse?</button>
+      <div class="faq-content">Puoi ricevere consulti scritti, videochiamate e prescrizioni a seconda dell’abbonamento.</div>
+    </div>
+    <div class="faq">
+      <button onclick="toggleFAQ(this)">È sicuro e riservato?</button>
+      <div class="faq-content">Sì, tutti i dati sono trattati con riservatezza e protetti secondo la normativa vigente.</div>
+    </div>
+    <div class="faq">
+      <button onclick="toggleFAQ(this)">Posso disdire in ogni momento?</button>
+      <div class="faq-content">Sì, l’abbonamento è senza vincoli e può essere annullato in qualsiasi momento.</div>
+    </div>
+  </section>  <section class="recensioni-section">
+    <h3>Cosa dicono i nostri pazienti</h3>
+    <div class="recensione">
+      <strong>Francesca R.</strong>
+      Servizio veloce, competente e molto umano. Consigliatissimo!
+    </div>
+    <div class="recensione">
+      <strong>Luca M.</strong>
+      Ho risparmiato tempo e ottenuto un parere medico dettagliato. Perfetto!
+    </div>
+    <div class="recensione">
+      <strong>Giulia T.</strong>
+      Il medico è stato disponibile anche di sera. Un vero supporto h24!
+    </div>
+  </section>  <footer>
     &copy; 2025 Medico Online - <a href="#">Privacy Policy</a>
-  </footer>
-
-  <div id="cookie-banner">
-    <p>Utilizziamo i cookie per migliorare l'esperienza utente. Continuando a navigare accetti l'uso dei cookie.</p>
-    <button id="accept-cookies">Accetta</button>
-  </div>
-
-  <script>
-    // Cookie banner
-    document.getElementById('accept-cookies').addEventListener('click', function() {
-      document.getElementById('cookie-banner').style.display = 'none';
-      localStorage.setItem('cookiesAccepted', 'true');
-    });
-
-    if (localStorage.getItem('cookiesAccepted') === 'true') {
-      document.getElementById('cookie-banner').style.display = 'none';
+  </footer>  <script>
+    function toggleFAQ(button) {
+      const content = button.nextElementSibling;
+      const isOpen = content.style.display === 'block';
+      content.style.display = isOpen ? 'none' : 'block';
     }
-
-    // FAQ toggle
-    document.querySelectorAll('.faq-question').forEach(q => {
-      q.addEventListener('click', () => {
-        const answer = q.nextElementSibling;
-        answer.style.display = (answer.style.display === 'block') ? 'none' : 'block';
-      });
-    });
-  </script>
-
-  <!-- Live Chat (Tawk.to) -->
-  <script type="text/javascript">
-    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-    (function(){
-      var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-      s1.async=true;
-      s1.src='https://embed.tawk.to/66211fc09a809f19fb2c3805/1hrh05t80';
-      s1.charset='UTF-8';
-      s1.setAttribute('crossorigin','*');
-      s0.parentNode.insertBefore(s1,s0);
-    })();
-  </script>
-
-</body>
+  </script>  <!-- Live Chat (Tawk.to) -->  <script type="text/javascript">
+  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+  (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/your_property_id_here/default';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+  })();
+  </script></body>
 </html>
