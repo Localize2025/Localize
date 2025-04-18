@@ -202,6 +202,20 @@
       background-color: #4CAF50;
     }
 
+    #whatsapp-chat {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 9999;
+      background-color: #25d366;
+      border-radius: 50%;
+      padding: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    }
+    #whatsapp-chat:hover {
+      transform: scale(1.1);
+    }
+
     @keyframes fadeInUp {
       from { opacity: 0; transform: translateY(30px); }
       to { opacity: 1; transform: translateY(0); }
@@ -270,27 +284,27 @@
 
   <section class="recensioni">
     <h3>Cosa dicono i nostri utenti</h3>
-    <blockquote>"Servizio velocissimo e preciso! Mi sono sentita ascoltata."</blockquote>
-    <blockquote>"Ottimo supporto medico anche nel weekend. Molto utile!"</blockquote>
-    <blockquote>"Consulenza ricevuta in meno di un'ora, super!"</blockquote>
+    <blockquote>"Servizio rapido, preciso e professionale. Lo consiglierò sicuramente!"</blockquote>
+    <blockquote>"Ho ricevuto una risposta chiara con spiegazioni dettagliate. Grande supporto!"</blockquote>
+    <blockquote>"Mi hanno aiutato in piena notte, con competenza e gentilezza. Grazie di cuore."</blockquote>
   </section>
 
   <section class="faq">
     <h3>Domande Frequenti (FAQ)</h3>
 
-    <div class="faq-item"><div class="faq-question">Quanto tempo serve per ricevere una risposta?</div><div class="faq-answer">Di solito rispondiamo entro 1-2 ore, massimo 12h nei momenti più intensi.</div></div>
+    <div class="faq-item"><div class="faq-question">Quanto tempo impiegate a rispondere?</div><div class="faq-answer">Generalmente entro 1-2 ore. Nei momenti di maggiore richiesta, massimo 12 ore.</div></div>
 
-    <div class="faq-item"><div class="faq-question">È un servizio legale?</div><div class="faq-answer">Sì, il servizio è conforme alla normativa italiana sulla consulenza sanitaria online.</div></div>
+    <div class="faq-item"><div class="faq-question">Il servizio è conforme alla legge?</div><div class="faq-answer">Sì. Operiamo nel rispetto della normativa italiana sulla telemedicina e consulenza online.</div></div>
 
-    <div class="faq-item"><div class="faq-question">Come funziona il pagamento?</div><div class="faq-answer">Puoi pagare in modo sicuro tramite Stripe con carta di credito o debito.</div></div>
+    <div class="faq-item"><div class="faq-question">Come posso pagare?</div><div class="faq-answer">Accettiamo pagamenti sicuri tramite Stripe, con carta di credito o debito.</div></div>
 
-    <div class="faq-item"><div class="faq-question">Posso disdire l’abbonamento?</div><div class="faq-answer">Sì, puoi cancellare in qualsiasi momento dalla tua area personale o contattandoci direttamente.</div></div>
+    <div class="faq-item"><div class="faq-question">Posso annullare l’abbonamento?</div><div class="faq-answer">Certamente. Puoi disdire in ogni momento dalla tua area personale o contattandoci.</div></div>
 
-    <div class="faq-item"><div class="faq-question">Posso allegare documenti o foto?</div><div class="faq-answer">Certo, puoi inviarci referti, foto o qualsiasi file utile alla valutazione medica.</div></div>
+    <div class="faq-item"><div class="faq-question">Posso inviare esami o immagini?</div><div class="faq-answer">Sì, puoi allegare referti, foto o documenti utili alla valutazione medica.</div></div>
 
-    <div class="faq-item"><div class="faq-question">È adatto anche ai bambini?</div><div class="faq-answer">Sì, offriamo pareri anche per problematiche pediatriche. Specifica l’età nel messaggio.</div></div>
+    <div class="faq-item"><div class="faq-question">Fornite consulenze pediatriche?</div><div class="faq-answer">Sì, includiamo consulenze per bambini. Ti chiediamo solo di indicare l’età del paziente.</div></div>
 
-    <div class="faq-item"><div class="faq-question">È un servizio sostitutivo del medico curante?</div><div class="faq-answer">No, il nostro servizio è complementare. Per emergenze o visite fisiche contatta sempre il tuo medico.</div></div>
+    <div class="faq-item"><div class="faq-question">Sostituisce il mio medico di base?</div><div class="faq-answer">No. Il nostro servizio è integrativo, non sostitutivo. In caso di urgenza, rivolgiti sempre al tuo medico curante o al 118.</div></div>
   </section>
 
   <footer>
@@ -301,6 +315,10 @@
     <p>Utilizziamo i cookie per migliorare l'esperienza utente. Continuando a navigare accetti l'uso dei cookie.</p>
     <button id="accept-cookies">Accetta</button>
   </div>
+
+  <a href="https://wa.me/393515503904" target="_blank" id="whatsapp-chat">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="Chat WhatsApp" style="width:50px;height:50px;">
+  </a>
 
   <script>
     // Cookie banner
