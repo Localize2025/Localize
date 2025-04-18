@@ -4,13 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Medico Online</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
       background-color: #f4f8fb;
       color: #333;
+      scroll-behavior: smooth;
     }
 
     header {
@@ -18,6 +18,7 @@
       padding: 2rem;
       text-align: center;
       color: white;
+      animation: fadeInDown 1s ease-out;
     }
 
     header h1 {
@@ -30,6 +31,7 @@
       color: white;
       text-align: center;
       padding: 5rem 2rem;
+      animation: fadeIn 2s ease-in-out;
     }
 
     .hero p {
@@ -57,14 +59,15 @@
 
     .form-section,
     .abbonamenti,
-    .recensioni,
-    .faq {
+    .faq,
+    .recensioni {
       max-width: 700px;
       margin: 2rem auto;
       padding: 2rem;
       background-color: white;
       border-radius: 12px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      animation: fadeInUp 1s ease;
     }
 
     form input, form textarea {
@@ -91,20 +94,9 @@
       background-color: #004d40;
     }
 
-    .abbonamenti h3,
-    .recensioni h3,
-    .faq h3 {
-      color: #00796b;
-      margin-bottom: 1rem;
-    }
-
     .abbonamento {
       margin-bottom: 2rem;
       text-align: center;
-    }
-
-    .abbonamento p {
-      margin: 0.5rem 0;
     }
 
     .abbonamento a {
@@ -140,31 +132,29 @@
     .telegram { background-color: #0088cc; }
     .email { background-color: #ea4335; }
 
-    .recensione {
-      border-left: 4px solid #00796b;
-      padding-left: 1rem;
+    .recensioni blockquote {
+      background: #f9f9f9;
+      padding: 1rem;
+      border-left: 5px solid #00796b;
       margin: 1rem 0;
       font-style: italic;
+      border-radius: 8px;
     }
 
     .faq-item {
-      margin-bottom: 1rem;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      overflow: hidden;
+      border-bottom: 1px solid #ddd;
+      padding: 1rem 0;
     }
 
     .faq-question {
-      background-color: #f0f0f0;
-      padding: 1rem;
       cursor: pointer;
       font-weight: bold;
+      color: #00796b;
     }
 
     .faq-answer {
       display: none;
-      padding: 1rem;
-      background-color: #fff;
+      padding-top: 0.5rem;
     }
 
     footer {
@@ -211,20 +201,35 @@
     #cookie-banner button:hover {
       background-color: #4CAF50;
     }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
   </style>
 </head>
 <body>
 
-  <header class="animate__animated animate__fadeInDown">
+  <header>
     <h1>Medico Online</h1>
   </header>
 
-  <div class="hero animate__animated animate__fadeIn">
+  <div class="hero">
     <p>Ricevi un parere medico ovunque tu sia<br>Servizio attivo 24/7</p>
     <a href="#contatto" class="button">Contatta il medico ora</a>
   </div>
 
-  <section class="form-section animate__animated animate__fadeInUp" id="contatto">
+  <section class="form-section" id="contatto">
     <h2>Modulo di contatto</h2>
     <form action="https://formspree.io/f/xwpldpjr" method="POST">
       <input type="text" name="nome" placeholder="Nome e Cognome" required>
@@ -241,7 +246,7 @@
     </div>
   </section>
 
-  <section class="abbonamenti animate__animated animate__fadeInUp">
+  <section class="abbonamenti">
     <h3>Abbonamenti disponibili</h3>
 
     <div class="abbonamento">
@@ -263,30 +268,29 @@
     </div>
   </section>
 
-  <section class="recensioni animate__animated animate__fadeInUp">
-    <h3>Cosa dicono i nostri pazienti</h3>
-    <div class="recensione">"Servizio velocissimo e preciso. Lo uso ogni volta che ho un dubbio!" – Laura B.</div>
-    <div class="recensione">"Il medico è molto disponibile e attento. Ottima esperienza!" – Marco T.</div>
-    <div class="recensione">"Rapporto qualità-prezzo imbattibile, consigliatissimo." – Giulia R.</div>
+  <section class="recensioni">
+    <h3>Cosa dicono i nostri utenti</h3>
+    <blockquote>"Servizio velocissimo e preciso! Mi sono sentita ascoltata."</blockquote>
+    <blockquote>"Ottimo supporto medico anche nel weekend. Molto utile!"</blockquote>
+    <blockquote>"Consulenza ricevuta in meno di un'ora, super!"</blockquote>
   </section>
 
-  <section class="faq animate__animated animate__fadeInUp">
-    <h3>Domande Frequenti</h3>
+  <section class="faq">
+    <h3>Domande Frequenti (FAQ)</h3>
 
-    <div class="faq-item">
-      <div class="faq-question">Quanto tempo impiega una risposta?</div>
-      <div class="faq-answer">In genere ricevi una risposta entro 30 minuti, 24/7.</div>
-    </div>
+    <div class="faq-item"><div class="faq-question">Quanto tempo serve per ricevere una risposta?</div><div class="faq-answer">Di solito rispondiamo entro 1-2 ore, massimo 12h nei momenti più intensi.</div></div>
 
-    <div class="faq-item">
-      <div class="faq-question">Posso ricevere prescrizioni?</div>
-      <div class="faq-answer">Sì, se il medico lo ritiene opportuno per il tuo caso.</div>
-    </div>
+    <div class="faq-item"><div class="faq-question">È un servizio legale?</div><div class="faq-answer">Sì, il servizio è conforme alla normativa italiana sulla consulenza sanitaria online.</div></div>
 
-    <div class="faq-item">
-      <div class="faq-question">È un servizio sicuro?</div>
-      <div class="faq-answer">Assolutamente sì, la tua privacy è protetta al 100%.</div>
-    </div>
+    <div class="faq-item"><div class="faq-question">Come funziona il pagamento?</div><div class="faq-answer">Puoi pagare in modo sicuro tramite Stripe con carta di credito o debito.</div></div>
+
+    <div class="faq-item"><div class="faq-question">Posso disdire l’abbonamento?</div><div class="faq-answer">Sì, puoi cancellare in qualsiasi momento dalla tua area personale o contattandoci direttamente.</div></div>
+
+    <div class="faq-item"><div class="faq-question">Posso allegare documenti o foto?</div><div class="faq-answer">Certo, puoi inviarci referti, foto o qualsiasi file utile alla valutazione medica.</div></div>
+
+    <div class="faq-item"><div class="faq-question">È adatto anche ai bambini?</div><div class="faq-answer">Sì, offriamo pareri anche per problematiche pediatriche. Specifica l’età nel messaggio.</div></div>
+
+    <div class="faq-item"><div class="faq-question">È un servizio sostitutivo del medico curante?</div><div class="faq-answer">No, il nostro servizio è complementare. Per emergenze o visite fisiche contatta sempre il tuo medico.</div></div>
   </section>
 
   <footer>
@@ -298,37 +302,37 @@
     <button id="accept-cookies">Accetta</button>
   </div>
 
-  <!-- Script Cookie -->
   <script>
+    // Cookie banner
     document.getElementById('accept-cookies').addEventListener('click', function() {
       document.getElementById('cookie-banner').style.display = 'none';
       localStorage.setItem('cookiesAccepted', 'true');
     });
+
     if (localStorage.getItem('cookiesAccepted') === 'true') {
       document.getElementById('cookie-banner').style.display = 'none';
     }
 
     // FAQ toggle
-    const faqs = document.querySelectorAll('.faq-question');
-    faqs.forEach(faq => {
-      faq.addEventListener('click', () => {
-        const answer = faq.nextElementSibling;
-        answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+    document.querySelectorAll('.faq-question').forEach(q => {
+      q.addEventListener('click', () => {
+        const answer = q.nextElementSibling;
+        answer.style.display = (answer.style.display === 'block') ? 'none' : 'block';
       });
     });
   </script>
 
-  <!-- Live Chat Tawk.to -->
+  <!-- Live Chat (Tawk.to) -->
   <script type="text/javascript">
-  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-  (function(){
-    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-    s1.async=true;
-    s1.src='https://embed.tawk.to/6620a6991ec1082f04e6b7c1/1hrjjk25p';
-    s1.charset='UTF-8';
-    s1.setAttribute('crossorigin','*');
-    s0.parentNode.insertBefore(s1,s0);
-  })();
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+      var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+      s1.async=true;
+      s1.src='https://embed.tawk.to/66211fc09a809f19fb2c3805/1hrh05t80';
+      s1.charset='UTF-8';
+      s1.setAttribute('crossorigin','*');
+      s0.parentNode.insertBefore(s1,s0);
+    })();
   </script>
 
 </body>
