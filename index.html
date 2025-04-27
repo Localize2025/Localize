@@ -2,201 +2,97 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Medico Online - Sempre al tuo fianco</title>
-
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f7f7f7;
-      color: #333;
-      line-height: 1.6;
-    }
-    header, footer {
-      background: #0077cc;
-      color: white;
-      padding: 20px 0;
-      text-align: center;
-    }
-    .container {
-      width: 90%;
-      max-width: 1000px;
-      margin: auto;
-      padding: 20px 0;
-    }
-    .hero {
-      background: #e1f5fe;
-      padding: 40px 20px;
-      text-align: center;
-    }
-    .hero h2 {
-      margin-top: 0;
-    }
-    .btn-primary, .btn-secondary {
-      display: inline-block;
-      margin: 10px 5px;
-      padding: 10px 20px;
-      text-decoration: none;
-      background: #0077cc;
-      color: white;
-      border-radius: 5px;
-    }
-    .btn-secondary {
-      background: #555;
-    }
-    form {
-      background: white;
-      padding: 20px;
-      border-radius: 5px;
-    }
-    input, textarea {
-      width: 100%;
-      margin-bottom: 15px;
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-    .cards {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-    }
-    .card {
-      background: white;
-      padding: 20px;
-      border-radius: 5px;
-      width: 280px;
-      text-align: center;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    .price {
-      font-size: 24px;
-      color: #0077cc;
-    }
-    blockquote {
-      background: #fff;
-      padding: 15px;
-      border-left: 5px solid #0077cc;
-      margin: 20px 0;
-    }
-    .faq-list {
-      margin-top: 20px;
-    }
-    .faq-item {
-      background: white;
-      margin-bottom: 15px;
-      padding: 15px;
-      border-radius: 5px;
-    }
-    footer a {
-      color: white;
-      text-decoration: underline;
-      margin: 0 5px;
-    }
-    @media (max-width: 600px) {
-      .cards {
-        flex-direction: column;
-        align-items: center;
-      }
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Medico Online - Sempre al tuo servizio</title>
 </head>
+<body style="font-family: Arial, sans-serif; margin: 0; background-color: #f0f8ff; color: #333;">
 
-<body>
+  <!-- Header -->
+  <header style="background-color: #00796b; color: white; padding: 2rem; text-align: center;">
+    <h1 style="margin: 0;">Medico Online - Sempre a tua disposizione</h1>
+  </header>
 
-<header>
-  <div class="container">
-    <h1>Medico Online</h1>
-    <p>Consulti medici online H24 / 7 giorni su 7</p>
-  </div>
-</header>
+  <!-- Hero -->
+  <section style="background: url('https://images.unsplash.com/photo-1588776814546-d7d69e2b867b?auto=format&fit=crop&w=1400&q=80') no-repeat center center/cover; color: white; text-align: center; padding: 5rem 2rem;">
+    <p style="font-size: 1.5rem;">Pareri medici ovunque tu sia<br>Servizio attivo 24h / 7 giorni su 7</p>
+    <a href="#contatto" style="background-color: #004d40; color: white; padding: 1rem 2rem; text-decoration: none; border-radius: 8px; margin-top: 1rem; display: inline-block;">Contatta il medico ora</a>
+  </section>
 
-<section class="hero">
-  <div class="container">
-    <h2>Ricevi subito un parere medico qualificato</h2>
-    <p>Ovunque tu sia, senza attese e senza stress.</p>
-    <a href="#contatto" class="btn-primary">Contatta il medico</a>
-  </div>
-</section>
-
-<section id="contatto" class="contact-form">
-  <div class="container">
-    <h2>Contattaci</h2>
+  <!-- Contatto -->
+  <section id="contatto" style="background-color: white; max-width: 800px; margin: 2rem auto; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+    <h2 style="text-align: center;">Modulo di Contatto</h2>
     <form action="https://formspree.io/f/xwpldpjr" method="POST">
-      <input type="text" name="nome" placeholder="Nome e Cognome" required>
-      <input type="email" name="email" placeholder="Email" required>
-      <input type="tel" name="telefono" placeholder="Telefono (opzionale)">
-      <textarea name="messaggio" rows="5" placeholder="Scrivi il tuo messaggio..." required></textarea>
-      <button type="submit" class="btn-primary">Invia richiesta</button>
+      <input type="text" name="nome" placeholder="Nome e Cognome" required style="width: 100%; padding: 12px; margin: 10px 0;">
+      <input type="email" name="email" placeholder="La tua Email" required style="width: 100%; padding: 12px; margin: 10px 0;">
+      <input type="tel" name="telefono" placeholder="Numero di telefono (opzionale)" style="width: 100%; padding: 12px; margin: 10px 0;">
+      <textarea name="messaggio" rows="5" placeholder="Scrivi il tuo messaggio qui..." required style="width: 100%; padding: 12px; margin: 10px 0;"></textarea>
+      <button type="submit" style="width: 100%; padding: 1rem; background-color: #00796b; color: white; border: none; border-radius: 6px;">Invia Richiesta</button>
     </form>
 
-    <div class="direct-contact">
-      <a href="https://wa.me/393515503904" target="_blank" class="btn-secondary">WhatsApp</a>
-      <a href="https://t.me/AnnaMyself" target="_blank" class="btn-secondary">Telegram</a>
-      <a href="mailto:ferriam78@gmail.com" target="_blank" class="btn-secondary">Email</a>
+    <div style="text-align: center; margin-top: 2rem;">
+      <a href="https://wa.me/393515503904" style="background-color: #25d366; color: white; padding: 0.8rem 1.2rem; text-decoration: none; border-radius: 6px; margin: 0.5rem; display: inline-block;">WhatsApp</a>
+      <a href="https://t.me/AnnaMyself" style="background-color: #0088cc; color: white; padding: 0.8rem 1.2rem; text-decoration: none; border-radius: 6px; margin: 0.5rem; display: inline-block;">Telegram</a>
+      <a href="mailto:ferriam78@gmail.com" style="background-color: #ea4335; color: white; padding: 0.8rem 1.2rem; text-decoration: none; border-radius: 6px; margin: 0.5rem; display: inline-block;">Email</a>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="abbonamenti">
-  <div class="container">
-    <h2>Abbonamenti</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>Pareri illimitati</h3>
-        <p class="price">€80/mese</p>
-        <a href="https://buy.stripe.com/8wM6rGgEydKn5BSeUW" target="_blank" class="btn-primary">Abbonati ora</a>
-      </div>
-      <div class="card">
-        <h3>Pacchetto dedicato</h3>
-        <p class="price">Prezzo su richiesta</p>
-        <a href="https://buy.stripe.com/fZe9DSdsm6hV3tKdQU" target="_blank" class="btn-primary">Abbonati ora</a>
-      </div>
+  <!-- Abbonamenti -->
+  <section style="background-color: white; max-width: 800px; margin: 2rem auto; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+    <h2 style="text-align: center;">Abbonamenti Disponibili</h2>
+    <div style="text-align: center;">
+      <h3>Pareri Illimitati</h3>
+      <p style="font-size: 1.2rem;">€80 al mese</p>
+      <a href="https://buy.stripe.com/8wM6rGgEydKn5BSeUW" target="_blank" style="background-color: #00796b; color: white; padding: 0.8rem 1.5rem; border-radius: 6px; text-decoration: none; display: inline-block;">Abbonati Ora</a>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="recensioni">
-  <div class="container">
-    <h2>Cosa dicono i nostri utenti</h2>
-    <blockquote>"Servizio rapido, preciso e professionale. Lo consiglierò sicuramente!"</blockquote>
-    <blockquote>"Ho ricevuto una risposta chiara con spiegazioni dettagliate. Grande supporto!"</blockquote>
-    <blockquote>"Mi hanno aiutato in piena notte, con competenza e gentilezza. Grazie di cuore."</blockquote>
-  </div>
-</section>
+  <!-- Recensioni -->
+  <section style="background-color: white; max-width: 800px; margin: 2rem auto; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+    <h2 style="text-align: center;">Cosa dicono i nostri utenti</h2>
+    <blockquote style="background-color: #f9f9f9; padding: 1rem; border-left: 5px solid #00796b; margin: 1rem 0;">"Servizio rapido, preciso e professionale. Lo consiglierò sicuramente!"</blockquote>
+    <blockquote style="background-color: #f9f9f9; padding: 1rem; border-left: 5px solid #00796b; margin: 1rem 0;">"Ho ricevuto una risposta chiara con spiegazioni dettagliate. Grande supporto!"</blockquote>
+    <blockquote style="background-color: #f9f9f9; padding: 1rem; border-left: 5px solid #00796b; margin: 1rem 0;">"Mi hanno aiutato in piena notte, con competenza e gentilezza. Grazie di cuore."</blockquote>
+  </section>
 
-<section class="faq">
-  <div class="container">
-    <h2>Domande Frequenti</h2>
-    <div class="faq-list">
-      <div class="faq-item">
-        <h3>Come funziona il servizio?</h3>
-        <p>Compila il modulo, ti risponderemo il prima possibile con un parere medico qualificato.</p>
-      </div>
-      <div class="faq-item">
-        <h3>In quali orari è attivo?</h3>
-        <p>Il servizio è disponibile 24 ore su 24, 7 giorni su 7.</p>
-      </div>
-      <div class="faq-item">
-        <h3>Chi risponde ai messaggi?</h3>
-        <p>Solo medici abilitati e iscritti all'Ordine dei Medici.</p>
-      </div>
-    </div>
-  </div>
-</section>
+  <!-- FAQ -->
+  <section style="background-color: white; max-width: 800px; margin: 2rem auto; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+    <h2 style="text-align: center;">Domande Frequenti (FAQ)</h2>
+    <ul style="list-style: none; padding: 0;">
+      <li style="margin-bottom: 1rem;"><strong>Quanto tempo impiegate a rispondere?</strong><br>Entro 1-2 ore. Massimo 12 ore nei periodi di picco.</li>
+      <li style="margin-bottom: 1rem;"><strong>Il servizio è conforme alla legge?</strong><br>Sì, in pieno rispetto della normativa italiana sulla telemedicina.</li>
+      <li style="margin-bottom: 1rem;"><strong>Come posso pagare?</strong><br>Tramite Stripe, con carta di credito o debito.</li>
+      <li style="margin-bottom: 1rem;"><strong>Posso annullare l’abbonamento?</strong><br>Sì, in ogni momento.</li>
+      <li style="margin-bottom: 1rem;"><strong>Posso inviare esami o immagini?</strong><br>Certo! Puoi inviare referti e documenti.</li>
+      <li style="margin-bottom: 1rem;"><strong>Fornite consulenze pediatriche?</strong><br>Sì, specifica l’età del paziente.</li>
+      <li style="margin-bottom: 1rem;"><strong>Sostituisce il mio medico di base?</strong><br>No, è un servizio aggiuntivo di supporto.</li>
+    </ul>
+  </section>
 
-<footer>
-  <div class="container">
-    <p>&copy; 2025 Medico Online. Tutti i diritti riservati.</p>
-    <p>
-      <a href="privacy.html">Privacy Policy</a> |
-      <a href="termini.html">Termini di Servizio</a>
-    </p>
-  </div>
-</footer>
+  <!-- Privacy Policy -->
+  <section id="privacy-policy" style="background-color: white; max-width: 800px; margin: 2rem auto; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+    <h2>Privacy Policy</h2>
+    <p>Raccogliamo solo i dati necessari per erogare i nostri servizi. I dati sono trattati in conformità al GDPR e non sono ceduti a terzi.</p>
+    <p>Utilizziamo solo cookie tecnici. Puoi gestire le preferenze direttamente dal tuo browser.</p>
+    <p>Per richieste o informazioni: <a href="mailto:ferriam78@gmail.com">ferriam78@gmail.com</a>.</p>
+  </section>
+
+  <!-- Termini di Servizio -->
+  <section id="termini-servizio" style="background-color: white; max-width: 800px; margin: 2rem auto; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+    <h2>Termini di Servizio</h2>
+    <p>Il servizio fornisce pareri medici a distanza a scopo informativo. Non sostituisce visite mediche tradizionali.</p>
+    <p>I pagamenti sono sicuri tramite Stripe. Puoi disdire l'abbonamento in qualsiasi momento.</p>
+    <p>Continuando ad utilizzare il servizio accetti i termini aggiornati.</p>
+  </section>
+
+  <!-- Footer -->
+  <footer style="background-color: #eceff1; text-align: center; padding: 2rem; font-size: 0.9rem; margin-top: 2rem;">
+    &copy; 2025 Medico Online - <a href="#privacy-policy" style="color: #00796b;">Privacy Policy</a> | <a href="#termini-servizio" style="color: #00796b;">Termini di Servizio</a>
+  </footer>
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/393515503904" target="_blank" style="position: fixed; bottom: 20px; right: 20px; background-color: #25d366; padding: 15px; border-radius: 50%; box-shadow: 0 4px 8px rgba(0,0,0,0.3);">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="Chat WhatsApp" style="width: 40px; height: 40px;">
+  </a>
 
 </body>
 </html>
