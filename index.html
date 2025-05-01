@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Localizzatore GPS</title>
+  <title>Trova il mio telefono</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
@@ -11,23 +11,30 @@
   </style>
 </head>
 <body>
-  <div id="map"></div>
+  <div id="map">Caricamento mappa...</div>
 
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
   <script>
-    // Coordinate fisse (modificabili)
-    const lat = 45.4642;  // Milano
-    const lng = 9.1900;
+    if ("geolocation" in navigator) {
+      navigator.geolocation.getCurrentPosition(function(position) {
+        const lat = position.coords.latitude;
+        const lng = position.coords.longitude;
 
-    const map = L.map('map').setView([lat, lng], 15);
+        const map = L.map('map').setView([lat, lng], 15);
 
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: 'Map data © OpenStreetMap contributors'
-    }).addTo(map);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          attribution: 'Map data © OpenStreetMap contributors'
+        }).addTo(map);
 
-    L.marker([lat, lng]).addTo(map)
-      .bindPopup('Posizione del dispositivo')
-      .openPopup();
+        L.marker([lat, lng]).addTo(map)
+          .bindPopup('Sei qui!')
+          .openPopup();
+      }, function(error) {
+        alert("Geolocalizzazione fallita: " + error.message);
+      });
+    } else {
+      alert("Geolocalizzazione non supportata dal browser.");
+    }
   </script>
 </body>
 </html>
