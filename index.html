@@ -1,183 +1,40 @@
 <!DOCTYPE html>
-<html lang="it">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Medico Online - Sempre al tuo fianco</title>
-
-  <!-- Aggiungi il link per il font Google -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <title>Localizzatore GPS</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
   <style>
-    body {
-      font-family: 'Roboto', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f9f9f9;
-    }
-
-    header {
-      background-color: #0077cc;
-      color: white;
-      padding: 20px 0;
-      text-align: center;
-    }
-
-    header h1 {
-      margin: 0;
-    }
-
-    header p {
-      margin: 5px 0;
-    }
-
-    section {
-      padding: 40px 20px;
-      text-align: center;
-      max-width: 1000px;
-      margin: auto;
-      background-color: #fff;
-      border-radius: 5px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-      margin-bottom: 30px;
-    }
-
-    section h2 {
-      margin-bottom: 20px;
-    }
-
-    section a {
-      display: inline-block;
-      margin: 10px 5px;
-      padding: 10px 20px;
-      text-decoration: none;
-      background-color: #0077cc;
-      color: white;
-      border-radius: 5px;
-      font-weight: bold;
-    }
-
-    section a:hover {
-      background-color: #005fa3;
-    }
-
-    form input, form textarea {
-      width: 100%;
-      margin-bottom: 15px;
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-
-    form button {
-      padding: 10px 20px;
-      background-color: #0077cc;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      font-weight: bold;
-    }
-
-    form button:hover {
-      background-color: #005fa3;
-    }
-
-    blockquote {
-      background: #fff;
-      padding: 15px;
-      border-left: 5px solid #0077cc;
-      margin: 20px 0;
-      font-style: italic;
-    }
-
-    footer {
-      background-color: #0077cc;
-      color: white;
-      padding: 20px 0;
-      text-align: center;
-    }
-
-    footer a {
-      color: white;
-      text-decoration: underline;
-    }
-
-    .whatsapp-button {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #25D366;
-      color: white;
-      padding: 15px;
-      border-radius: 50%;
-      text-align: center;
-      font-size: 24px;
-      z-index: 1000;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    }
-
-    .whatsapp-button:hover {
-      background-color: #128C7E;
-    }
+    body, html { margin: 0; padding: 0; }
+    #map { height: 100vh; width: 100vw; }
   </style>
 </head>
 <body>
+  <div id="map"></div>
 
-<header>
-  <div>
-    <h1>Medico Online</h1>
-    <p>Consulti medici online H24 / 7 giorni su 7</p>
-  </div>
-</header>
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script>
+    // Carica la posizione da un file JSON
+    fetch('posizione.json')
+      .then(response => response.json())
+      .then(data => {
+        const lat = data.lat;
+        const lng = data.lng;
 
-<section style="background: #e1f5fe;">
-  <div>
-    <h2>Ricevi subito un parere medico qualificato</h2>
-    <p>Ovunque tu sia, senza attese e senza stress.</p>
-    <a href="#contatto">Contatta il medico</a>
-  </div>
-</section>
+        const map = L.map('map').setView([lat, lng], 15);
 
-<section id="contatto">
-  <div>
-    <h2>Contattaci</h2>
-    <form action="https://formspree.io/f/xwpldpjr" method="POST">
-      <input type="text" name="nome" placeholder="Nome e Cognome" required>
-      <input type="email" name="email" placeholder="Email" required>
-      <input type="tel" name="telefono" placeholder="Telefono (opzionale)">
-      <textarea name="messaggio" rows="5" placeholder="Scrivi il tuo messaggio..." required></textarea>
-      <button type="submit">Invia richiesta</button>
-    </form>
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          attribution: 'Map data © OpenStreetMap contributors'
+        }).addTo(map);
 
-    <div>
-      <a href="https://wa.me/393515503904" target="_blank">WhatsApp</a>
-      <a href="https://t.me/AnnaMyself" target="_blank">Telegram</a>
-      <a href="mailto:ferriam78@gmail.com" target="_blank">Email</a>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div>
-    <h2>Cosa dicono i nostri utenti</h2>
-    <blockquote>"Servizio rapido, preciso e professionale. Lo consiglierò sicuramente!"</blockquote>
-    <blockquote>"Ho ricevuto una risposta chiara con spiegazioni dettagliate. Grande supporto!"</blockquote>
-    <blockquote>"Mi hanno aiutato in piena notte, con competenza e gentilezza. Grazie di cuore."</blockquote>
-  </div>
-</section>
-
-<footer>
-  <div>
-    <p>&copy; 2025 Medico Online. Tutti i diritti riservati.</p>
-    <p>
-      <a href="privacy.html">Privacy Policy</a> |
-      <a href="termini.html">Termini di Servizio</a>
-    </p>
-  </div>
-</footer>
-
-<!-- Pulsante WhatsApp fisso -->
-<a href="https://wa.me/393515503904" class="whatsapp-button" target="_blank">&#128222;</a>
-
+        L.marker([lat, lng]).addTo(map)
+          .bindPopup('Posizione attuale del dispositivo')
+          .openPopup();
+      })
+      .catch(error => {
+        console.error("Errore nel caricamento della posizione:", error);
+      });
+  </script>
 </body>
 </html>
