@@ -1,40 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Trova il mio telefono</title>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <title>Attiva il Localizzatore GPS</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
-    body, html { margin: 0; padding: 0; }
-    #map { height: 100vh; width: 100vw; }
+    body { font-family: sans-serif; text-align: center; padding: 50px; }
+    .btn {
+      padding: 15px 30px;
+      background-color: #6772e5;
+      color: white;
+      font-size: 18px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      text-decoration: none;
+    }
   </style>
 </head>
 <body>
-  <div id="map">Caricamento mappa...</div>
+  <h1>Attiva il Localizzatore del tuo Dispositivo</h1>
+  <p>Per soli 1€ al mese, puoi vedere la posizione del tuo telefono in tempo reale.</p>
+  <a href="https://buy.stripe.com/fZedU8ewqaybaWc7sz" class="btn">Abbonati ora</a>
 
-  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-  <script>
-    if ("geolocation" in navigator) {
-      navigator.geolocation.getCurrentPosition(function(position) {
-        const lat = position.coords.latitude;
-        const lng = position.coords.longitude;
-
-        const map = L.map('map').setView([lat, lng], 15);
-
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-          attribution: 'Map data © OpenStreetMap contributors'
-        }).addTo(map);
-
-        L.marker([lat, lng]).addTo(map)
-          .bindPopup('Sei qui!')
-          .openPopup();
-      }, function(error) {
-        alert("Geolocalizzazione fallita: " + error.message);
-      });
-    } else {
-      alert("Geolocalizzazione non supportata dal browser.");
-    }
-  </script>
+  <p style="margin-top: 40px;">Hai già pagato?</p>
+  <a href="dashboard.html" class="btn" style="background-color: green;">Vai alla Dashboard</a>
 </body>
 </html>
