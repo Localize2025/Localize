@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Invia Posizione</title>
+  <meta charset="UTF-8" />
+</head>
+<body>
+  <h1>Invio della posizione simulata...</h1>
+  <script>
+    // Simulazione: ogni 5 secondi invia nuove coordinate a localStorage (in futuro: Firebase)
+    setInterval(() => {
+      const fakeLat = 45.4642 + (Math.random() - 0.5) * 0.01;
+      const fakeLng = 9.1900 + (Math.random() - 0.5) * 0.01;
+      localStorage.setItem("demo_lat", fakeLat);
+      localStorage.setItem("demo_lng", fakeLng);
+    }, 5000);
+  </script>
+</body>
+</html>
