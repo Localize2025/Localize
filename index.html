@@ -1,92 +1,111 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <title>Disponibilità Medica</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Servizio Medico</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: #e8f9ff;
-      color: #222;
+      background: linear-gradient(to right, #e0f7fa, #e1bee7);
+      font-family: "Segoe UI", sans-serif;
       margin: 0;
-      padding: 20px;
+      padding: 0;
     }
 
-    .codice {
-      text-align: right;
-      font-size: 12px;
-      margin-bottom: 10px;
-    }
-
-    .codice a {
-      color: purple;
-      text-decoration: none;
-    }
-
-    .container {
-      background: #fff;
-      border-radius: 10px;
-      padding: 25px;
+    .box {
       max-width: 700px;
-      margin: auto;
-      box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+      margin: 40px auto;
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+      padding: 30px 25px;
     }
 
     h1 {
-      color: #007acc;
+      color: #0288d1;
+      font-size: 26px;
       margin-bottom: 10px;
     }
 
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    strong {
+      color: #000;
+    }
+
     h2 {
-      color: #007acc;
-      margin-top: 25px;
+      color: #0288d1;
+      font-size: 20px;
+      margin-top: 20px;
     }
 
     ul {
-      list-style: disc;
       padding-left: 20px;
+      margin-top: 10px;
     }
 
-    li {
+    ul li {
       margin-bottom: 8px;
+      font-size: 16px;
     }
 
-    a {
-      color: purple;
+    .link-purple a {
+      color: #9c27b0;
       text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    .prezzo {
-      color: green;
       font-weight: bold;
     }
 
-    .spiegazione {
-      margin-top: 15px;
+    .link-purple a:hover {
+      text-decoration: underline;
+    }
+
+    .price {
+      color: #2e7d32;
+      font-weight: bold;
+      font-size: 18px;
+      margin: 15px 0;
+    }
+
+    .copy-code {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      font-size: 14px;
+    }
+
+    .copy-code a {
+      color: #9c27b0;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .copy-code a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
-  <div class="codice">[ <a href="#">Copia codice</a> ]</div>
-
-  <div class="container">
+  <div class="copy-code"><a href="#">[ Copia codice ]</a></div>
+  <div class="box">
     <h1>Benvenuto al Servizio di Disponibilità Medica</h1>
     <p>Offro la mia <strong>disponibilità medica</strong> a soli <strong>15 euro al mese</strong>.</p>
 
     <h2>Cosa troverai qui:</h2>
-    <ul>
-      <li><a href="servizi.html">Servizi inclusi</a></li>
-      <li><a href="vantaggi.html">Vantaggi</a></li>
-      <li><a href="faq.html">Domande frequenti</a></li>
-      <li><a href="contatti.html">Contatti</a></li>
+    <ul class="link-purple">
+      <li><a href="#">Servizi inclusi</a></li>
+      <li><a href="#">Vantaggi</a></li>
+      <li><a href="#">Domande frequenti</a></li>
+      <li><a href="#">Contatti</a></li>
     </ul>
 
-    <p class="spiegazione">Il mio obiettivo è garantire un <strong>supporto medico rapido e costante</strong>, accessibile a tutti.</p>
-    <p class="prezzo">Prezzo: 15€/mese - senza costi aggiuntivi.</p>
+    <p>Il mio obiettivo è garantire un <strong>supporto medico rapido e costante</strong>, accessibile a tutti.</p>
+
+    <p class="price">Prezzo: 15€/mese - senza costi aggiuntivi.</p>
+
     <p>Inizia subito a prenderti cura della tua salute con un medico sempre disponibile.</p>
   </div>
 </body>
