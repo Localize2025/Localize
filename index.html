@@ -1,22 +1,109 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <title>Download dei File</title>
+  <meta charset="UTF-8">
+  <title>Servizio Sanitario Domiciliare</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    header {
+      background-color: #0066cc;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    section {
+      background: white;
+      margin: 20px auto;
+      max-width: 800px;
+      padding: 20px;
+      border-radius: 10px;
+      position: relative;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      margin-top: 0;
+    }
+
+    .copy-btn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: #0066cc;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .code {
+      background: #f4f4f4;
+      padding: 10px;
+      border-radius: 5px;
+      margin-top: 10px;
+      font-family: monospace;
+      white-space: pre-wrap;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 14px;
+      color: #777;
+      margin: 40px 0;
+    }
+  </style>
 </head>
 <body>
-    <h1>Elenco dei file disponibili</h1>
-    <ul>
-        <li><a href="file-7WKjWxiGq6gt775By66fR8" download>Scarica file-7WKjWxiGq6gt775By66fR8</a></li>
-        <li><a href="file-KqcYUYn6icWpRVUnY3VYpV" download>Scarica file-KqcYUYn6icWpRVUnY3VYpV</a></li>
-        <li><a href="file-WB4xersod25h6c4qxVMQ33" download>Scarica file-WB4xersod25h6c4qxVMQ33</a></li>
-        <li><a href="file-JWDt39hxsp1Y7ienKYRLvC" download>Scarica file-JWDt39hxsp1Y7ienKYRLvC</a></li>
-        <li><a href="file-9vvw97NMYQgzzQBpgUWRw2" download>Scarica file-9vvw97NMYQgzzQBpgUWRw2</a></li>
-        <li><a href="file-WacWJRyXP8ouRQh1YEwSj7" download>Scarica file-WacWJRyXP8ouRQh1YEwSj7</a></li>
-        <li><a href="file-8zu8R12bEvysT1nrdLLinb" download>Scarica file-8zu8R12bEvysT1nrdLLinb</a></li>
-        <li><a href="file-G263AkboiNmnVXiRUqxYpU" download>Scarica file-G263AkboiNmnVXiRUqxYpU</a></li>
-        <li><a href="file-5jC2xx9DxiBy9qXvXYnscL" download>Scarica file-5jC2xx9DxiBy9qXvXYnscL</a></li>
-        <li><a href="file-GPnywKNpwNS6pzwcLStXVi" download>Scarica file-GPnywKNpwNS6pzwcLStXVi</a></li>
-    </ul>
+
+<header>
+  <h1>Assistenza Sanitaria a Domicilio</h1>
+  <p>Servizi medici ovunque tu sia</p>
+</header>
+
+<section>
+  <button class="copy-btn" onclick="copyToClipboard('servizi')">Copia codice</button>
+  <h2>Servizi Offerti</h2>
+  <div id="servizi" class="code">
+Medicina Generale<br>
+Fisioterapia a domicilio<br>
+Psicologia e Logopedia<br>
+Prelievi ed esami clinici<br>
+Assistenza infermieristica
+  </div>
+</section>
+
+<section>
+  <button class="copy-btn" onclick="copyToClipboard('contatti')">Copia codice</button>
+  <h2>Contatti</h2>
+  <div id="contatti" class="code">
+Email: info@iltuoservizio.it<br>
+Telefono: +39 0123 456789<br>
+Orari: 7 giorni su 7, dalle 08:00 alle 20:00
+  </div>
+</section>
+
+<footer>
+  &copy; 2025 Il Tuo Servizio Sanitario. Tutti i diritti riservati.
+</footer>
+
+<script>
+  function copyToClipboard(id) {
+    const content = document.getElementById(id).innerText;
+    navigator.clipboard.writeText(content).then(() => {
+      alert("Testo copiato!");
+    });
+  }
+</script>
+
 </body>
 </html>
