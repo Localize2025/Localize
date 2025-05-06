@@ -6,31 +6,39 @@
   <title>Servizio Medico</title>
   <style>
     body {
-      background: linear-gradient(to right, #e0f7fa, #e1bee7);
-      font-family: "Segoe UI", sans-serif;
       margin: 0;
       padding: 0;
+      font-family: "Segoe UI", sans-serif;
+      background: linear-gradient(135deg, #a1c4fd, #c2e9fb, #fbc2eb, #fcd6fb);
+      background-size: 400% 400%;
+      animation: gradientShift 15s ease infinite;
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
 
     .box {
-      max-width: 700px;
-      margin: 40px auto;
+      max-width: 720px;
+      margin: 50px auto;
       background: white;
-      border-radius: 15px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.15);
-      padding: 30px 25px;
+      border-radius: 20px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+      padding: 40px 30px;
     }
 
     h1 {
-      color: #0288d1;
-      font-size: 26px;
-      margin-bottom: 10px;
+      font-size: 28px;
+      color: #0277bd;
+      margin-bottom: 15px;
     }
 
     p {
-      font-size: 16px;
-      line-height: 1.6;
-      color: #333;
+      font-size: 17px;
+      line-height: 1.7;
+      color: #444;
     }
 
     strong {
@@ -38,9 +46,9 @@
     }
 
     h2 {
+      font-size: 22px;
       color: #0288d1;
-      font-size: 20px;
-      margin-top: 20px;
+      margin-top: 25px;
     }
 
     ul {
@@ -49,57 +57,31 @@
     }
 
     ul li {
-      margin-bottom: 8px;
-      font-size: 16px;
-    }
-
-    .link-purple a {
-      color: #9c27b0;
-      text-decoration: none;
+      margin-bottom: 10px;
+      font-size: 17px;
+      color: #6a1b9a;
       font-weight: bold;
-    }
-
-    .link-purple a:hover {
-      text-decoration: underline;
     }
 
     .price {
+      font-size: 18px;
       color: #2e7d32;
       font-weight: bold;
-      font-size: 18px;
-      margin: 15px 0;
-    }
-
-    .copy-code {
-      position: absolute;
-      top: 15px;
-      right: 20px;
-      font-size: 14px;
-    }
-
-    .copy-code a {
-      color: #9c27b0;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .copy-code a:hover {
-      text-decoration: underline;
+      margin: 20px 0;
     }
   </style>
 </head>
 <body>
-  <div class="copy-code"><a href="#">[ Copia codice ]</a></div>
   <div class="box">
     <h1>Benvenuto al Servizio di Disponibilità Medica</h1>
     <p>Offro la mia <strong>disponibilità medica</strong> a soli <strong>15 euro al mese</strong>.</p>
 
     <h2>Cosa troverai qui:</h2>
-    <ul class="link-purple">
-      <li><a href="#">Servizi inclusi</a></li>
-      <li><a href="#">Vantaggi</a></li>
-      <li><a href="#">Domande frequenti</a></li>
-      <li><a href="#">Contatti</a></li>
+    <ul>
+      <li>Servizi inclusi</li>
+      <li>Vantaggi</li>
+      <li>Domande frequenti</li>
+      <li>Contatti</li>
     </ul>
 
     <p>Il mio obiettivo è garantire un <strong>supporto medico rapido e costante</strong>, accessibile a tutti.</p>
