@@ -1,15 +1,66 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Servizio di Disponibilità Medica</title>
-  </head>
-  <body>
-    <pre style="text-align:right;">
-[ <a href="#" onclick="navigator.clipboard.writeText(document.documentElement.innerHTML)">Copia codice</a> ]
-    </pre>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Servizio di Disponibilità Medica</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f8ff;
+      color: #222;
+      padding: 20px;
+      line-height: 1.6;
+    }
 
+    h1 {
+      color: #0077cc;
+      font-size: 28px;
+    }
+
+    h2 {
+      margin-top: 20px;
+      color: #004d80;
+    }
+
+    a {
+      color: #9900cc;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .codice {
+      text-align: right;
+      font-size: 12px;
+    }
+
+    .prezzo {
+      font-size: 18px;
+      color: #006600;
+      font-weight: bold;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    .box {
+      background: #ffffff;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      max-width: 700px;
+      margin: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="codice">[ <a href="#">Copia codice</a> ]</div>
+  <div class="box">
     <h1>Benvenuto al Servizio di Disponibilità Medica</h1>
-
     <p>Offro la mia <strong>disponibilità medica</strong> a soli <strong>15 euro al mese</strong>.</p>
 
     <h2>Cosa troverai qui:</h2>
@@ -21,9 +72,8 @@
     </ul>
 
     <p>Il mio obiettivo è garantire un <strong>supporto medico rapido e costante</strong>, accessibile a tutti.</p>
-
-    <p><strong>Prezzo: 15€/mese</strong> - senza costi aggiuntivi.</p>
-
+    <p class="prezzo">Prezzo: 15€/mese - senza costi aggiuntivi.</p>
     <p>Inizia subito a prenderti cura della tua salute con un medico sempre disponibile.</p>
-  </body>
+  </div>
+</body>
 </html>
