@@ -2,108 +2,53 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8">
-  <title>Servizio Sanitario Domiciliare</title>
+  <title>Home - Servizio Sanitario Remoto</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: #f9f9f9;
+      font-family: sans-serif;
       margin: 0;
-      padding: 0;
-      color: #333;
+      background: #f0f4f8;
     }
-
-    header {
-      background-color: #0066cc;
+    header, nav, footer {
+      background-color: #007acc;
       color: white;
-      padding: 20px;
       text-align: center;
+      padding: 15px;
     }
-
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+    }
     section {
-      background: white;
-      margin: 20px auto;
       max-width: 800px;
+      margin: 40px auto;
+      background: white;
       padding: 20px;
       border-radius: 10px;
-      position: relative;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-
-    h2 {
-      margin-top: 0;
-    }
-
-    .copy-btn {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      background: #0066cc;
-      color: white;
-      border: none;
-      padding: 5px 10px;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 14px;
-    }
-
-    .code {
-      background: #f4f4f4;
-      padding: 10px;
-      border-radius: 5px;
-      margin-top: 10px;
-      font-family: monospace;
-      white-space: pre-wrap;
-    }
-
-    footer {
-      text-align: center;
-      font-size: 14px;
-      color: #777;
-      margin: 40px 0;
     }
   </style>
 </head>
 <body>
+  <header>
+    <h1>Servizio Sanitario Remoto</h1>
+    <p>Assistenza medica da remoto ovunque tu sia</p>
+  </header>
 
-<header>
-  <h1>Assistenza Sanitaria a Domicilio</h1>
-  <p>Servizi medici ovunque tu sia</p>
-</header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="servizi.html">Servizi</a>
+    <a href="prenota.html">Prenota</a>
+    <a href="contatti.html">Contatti</a>
+  </nav>
 
-<section>
-  <button class="copy-btn" onclick="copyToClipboard('servizi')">Copia codice</button>
-  <h2>Servizi Offerti</h2>
-  <div id="servizi" class="code">
-Medicina Generale<br>
-Fisioterapia a domicilio<br>
-Psicologia e Logopedia<br>
-Prelievi ed esami clinici<br>
-Assistenza infermieristica
-  </div>
-</section>
+  <section>
+    <h2>Benvenuto</h2>
+    <p>Offriamo assistenza sanitaria a distanza, professionale e veloce. Scopri i nostri servizi e prenota comodamente da casa.</p>
+  </section>
 
-<section>
-  <button class="copy-btn" onclick="copyToClipboard('contatti')">Copia codice</button>
-  <h2>Contatti</h2>
-  <div id="contatti" class="code">
-Email: info@iltuoservizio.it<br>
-Telefono: +39 0123 456789<br>
-Orari: 7 giorni su 7, dalle 08:00 alle 20:00
-  </div>
-</section>
-
-<footer>
-  &copy; 2025 Il Tuo Servizio Sanitario. Tutti i diritti riservati.
-</footer>
-
-<script>
-  function copyToClipboard(id) {
-    const content = document.getElementById(id).innerText;
-    navigator.clipboard.writeText(content).then(() => {
-      alert("Testo copiato!");
-    });
-  }
-</script>
-
+  <footer>
+    &copy; 2025 - Servizio Sanitario Remoto
+  </footer>
 </body>
 </html>
