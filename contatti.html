@@ -1,37 +1,70 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contatti - Medico Online</title>
-  <link rel="stylesheet" href="stile.css">
+  <meta charset="UTF-8">
+  <title>Contatti - Servizio Sanitario Remoto</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      background: #f0f4f8;
+    }
+    header, nav, footer {
+      background-color: #007acc;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+    }
+    section {
+      max-width: 800px;
+      margin: 40px auto;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+    }
+    .whatsapp-link {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 20px;
+      background-color: #25D366;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 18px;
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <h1>Contatta il Medico</h1>
-  </header>
 
-  <section class="form-section">
-    <h2>Modulo di contatto</h2>
-    <form action="https://formspree.io/f/xwpldpjr" method="POST">
-      <input type="text" name="nome" placeholder="Nome e Cognome" required>
-      <input type="email" name="email" placeholder="La tua Email" required>
-      <input type="tel" name="telefono" placeholder="Telefono (opzionale)">
-      <textarea name="messaggio" rows="5" placeholder="Scrivi qui il tuo messaggio..." required></textarea>
-      <button type="submit">Invia</button>
-    </form>
+<header>
+  <h1>Contatti</h1>
+</header>
 
-    <div class="contatti-diretti">
-      <a href="https://wa.me/393515503904" class="whatsapp" target="_blank">WhatsApp</a>
-      <a href="https://t.me/AnnaMyself" class="telegram" target="_blank">Telegram</a>
-      <a href="mailto:ferriam78@gmail.com" class="email" target="_blank">Email</a>
-    </div>
-  </section>
+<nav>
+  <a href="index.html">Home</a>
+  <a href="servizi.html">Servizi</a>
+  <a href="prenota.html">Prenota</a>
+  <a href="contatti.html">Contatti</a>
+</nav>
 
-  <footer>
-    <a href="index.html">Home</a> | 
-    <a href="privacy.html">Privacy</a> | 
-    <a href="termini.html">Termini di Servizio</a>
-  </footer>
+<section>
+  <h2>Hai bisogno di assistenza?</h2>
+  <p>Per qualsiasi informazione o per prenotare una visita, contattaci direttamente su WhatsApp.</p>
+
+  <a class="whatsapp-link" href="https://wa.me/393515503904?text=Ciao%2C+vorrei+prenotare+una+visita+remota" target="_blank">
+    Prenota via WhatsApp
+  </a>
+</section>
+
+<footer>
+  &copy; 2025 - Servizio Sanitario Remoto
+</footer>
+
 </body>
 </html>
