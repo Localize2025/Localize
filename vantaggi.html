@@ -5,14 +5,82 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Vantaggi - Disponibilità Medica</title>
   <style>
-    body { margin: 0; font-family: "Segoe UI", sans-serif; background-color: #f4fafd; color: #333; }
-    header, footer { background-color: #007acc; color: white; text-align: center; padding: 20px; }
-    nav { display: flex; justify-content: center; background-color: #005f99; }
-    nav a { color: white; text-decoration: none; padding: 14px 20px; }
-    nav a:hover { background-color: #004a73; }
-    .section { padding: 30px 20px; max-width: 800px; margin: auto; }
-    .section h2 { color: #007acc; border-bottom: 2px solid #007acc; padding-bottom: 5px; }
-    ul { padding-left: 20px; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      background-color: #f4fafd;
+      color: #333;
+    }
+    header {
+      background-color: #007acc;
+      padding: 20px;
+      text-align: center;
+      color: white;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #005f99;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 14px 20px;
+      display: inline-block;
+    }
+    nav a:hover {
+      background-color: #004a73;
+    }
+    .email-icon {
+      display: inline-block;
+      margin-left: 10px;
+    }
+    .email-icon img {
+      vertical-align: middle;
+      width: 20px;
+      height: 20px;
+    }
+    .section {
+      padding: 30px 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+    .section h2 {
+      color: #007acc;
+      border-bottom: 2px solid #007acc;
+      padding-bottom: 5px;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    footer {
+      background-color: #005f99;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      font-size: 0.9em;
+    }
+    .whatsapp-float {
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      bottom: 80px;
+      right: 20px;
+      background-color: #25d366;
+      color: white;
+      border-radius: 50px;
+      text-align: center;
+      font-size: 30px;
+      box-shadow: 2px 2px 3px #999;
+      z-index: 100;
+    }
+    .whatsapp-float img {
+      margin-top: 15px;
+      width: 30px;
+      height: 30px;
+    }
   </style>
 </head>
 <body>
@@ -22,26 +90,33 @@
 </header>
 
 <nav>
+  <a href="index.html">Home</a>
   <a href="servizi.html">Servizi</a>
   <a href="vantaggi.html">Vantaggi</a>
   <a href="faq.html">FAQ</a>
   <a href="contatti.html">Contatti</a>
+  <a class="email-icon" href="mailto:ferriam78@gmail.com" title="Scrivi una mail">
+    <img src="https://img.icons8.com/ios-glyphs/30/ffffff/new-post.png" alt="Email">
+  </a>
 </nav>
 
 <section class="section">
-  <h2>Perché scegliere questo servizio</h2>
+  <h2>Perché scegliere il nostro servizio?</h2>
   <ul>
-    <li>Risposta rapida ogni giorno</li>
-    <li>Prezzo fisso senza sorprese</li>
-    <li>Comunicazione semplice via WhatsApp</li>
-    <li>Nessun vincolo contrattuale</li>
-    <li>Supporto medico umano e diretto</li>
+    <li>Accesso rapido a consulenze mediche</li>
+    <li>Disponibilità 7 giorni su 7</li>
+    <li>Supporto continuo senza limiti</li>
+    <li>Prezzo fisso e trasparente</li>
   </ul>
 </section>
 
 <footer>
   &copy; 2025 Servizio di Disponibilità Medica – Tutti i diritti riservati
 </footer>
+
+<a class="whatsapp-float" href="https://wa.me/393515503904" target="_blank" title="Chatta su WhatsApp">
+  <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png" alt="WhatsApp">
+</a>
 
 </body>
 </html>
