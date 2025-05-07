@@ -1,206 +1,63 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Servizio di Disponibilità Medica</title>
+  <meta charset="UTF-8">
+  <title>Disponibilità Medica</title>
   <style>
     body {
       margin: 0;
-      font-family: "Segoe UI", sans-serif;
-      color: #333;
-      background: linear-gradient(-45deg, #e0f7fa, #f1f8ff, #d0f0ff, #e8f9ff);
-      background-size: 400% 400%;
-      animation: gradientBG 15s ease infinite;
-    }
-
-    @keyframes gradientBG {
-      0% {background-position: 0% 50%;}
-      50% {background-position: 100% 50%;}
-      100% {background-position: 0% 50%;}
-    }
-
-    header {
-      background-color: #007acc;
-      padding: 20px;
-      text-align: center;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #4fc3f7, #1976d2);
       color: white;
+      text-align: center;
     }
-
-    nav {
-      display: flex;
-      justify-content: center;
-      background-color: #005f99;
+    header {
+      padding: 30px;
+      background-color: rgba(0, 0, 0, 0.2);
     }
-
     nav a {
       color: white;
       text-decoration: none;
-      padding: 14px 20px;
-      display: inline-block;
+      margin: 15px;
+      font-weight: bold;
     }
-
     nav a:hover {
-      background-color: #004a73;
-    }
-
-    .hero {
-      padding: 40px 20px;
-      text-align: center;
-    }
-
-    .hero h1 {
-      color: #007acc;
-      font-size: 2em;
-      margin-bottom: 10px;
-    }
-
-    .hero p {
-      font-size: 1.2em;
-      margin-bottom: 20px;
-    }
-
-    .cta-button {
-      background-color: #28a745;
-      color: white;
-      border: none;
-      padding: 15px 30px;
-      font-size: 1em;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    .cta-button:hover {
-      background-color: #218838;
-    }
-
-    .section {
-      padding: 30px 20px;
-      max-width: 800px;
-      margin: auto;
-    }
-
-    .section h2 {
-      color: #007acc;
-      border-bottom: 2px solid #007acc;
-      padding-bottom: 5px;
-    }
-
-    ul {
-      padding-left: 20px;
-    }
-
-    footer {
-      background-color: #005f99;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
-    }
-
-    footer a {
-      color: #fff;
       text-decoration: underline;
-      margin: 0 10px;
     }
-
-    #cookie-banner {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background: rgba(0, 0, 0, 0.85);
-      color: white;
-      padding: 15px;
-      text-align: center;
-      z-index: 9999;
-      display: none;
+    section {
+      padding: 50px 20px;
     }
-
-    #cookie-banner button {
-      margin-left: 15px;
-      padding: 8px 16px;
-      background-color: #28a745;
-      border: none;
-      color: white;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    #cookie-banner button:hover {
-      background-color: #218838;
+    footer {
+      background-color: rgba(0, 0, 0, 0.2);
+      padding: 20px;
+      font-size: 14px;
     }
   </style>
 </head>
 <body>
+  <header>
+    <h1>Disponibilità Medica</h1>
+    <nav>
+      <a href="servizi.html">Servizi</a>
+      <a href="vantaggi.html">Vantaggi</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contatti.html">Contatti</a>
+      <a href="iscrizione.html">Iscriviti</a>
+    </nav>
+  </header>
 
-<header>
-  <h1>Servizio di Disponibilità Medica</h1>
-</header>
+  <section>
+    <h2>Benvenuto nel tuo servizio medico sempre disponibile</h2>
+    <p>Solo 15€/mese per avere un medico sempre a disposizione. Assistenza rapida, continua e ovunque tu sia.</p>
+  </section>
 
-<nav>
-  <a href="#">Servizi</a>
-  <a href="#">Vantaggi</a>
-  <a href="#">FAQ</a>
-  <a href="#">Contatti</a>
-</nav>
-
-<section class="hero">
-  <h1>La tua salute al primo posto</h1>
-  <p>Assistenza medica sempre disponibile a soli <strong>15€/mese</strong>.</p>
-  <button class="cta-button" onclick="location.href='https://wa.me/393515503904'">Contattami su WhatsApp</button>
-</section>
-
-<section class="section">
-  <h2>Cosa include il servizio?</h2>
-  <ul>
-    <li>Consulenza medica rapida 7 giorni su 7</li>
-    <li>Risposte entro poche ore</li>
-    <li>Nessun costo aggiuntivo</li>
-    <li>Supporto continuativo</li>
-  </ul>
-</section>
-
-<section class="section">
-  <h2>Perché scegliermi?</h2>
-  <ul>
-    <li>Professionista affidabile</li>
-    <li>Massima riservatezza</li>
-    <li>Prezzo fisso e trasparente</li>
-    <li>Comodità via WhatsApp</li>
-  </ul>
-</section>
-
-<section class="section">
-  <h2>Domande Frequenti</h2>
-  <p><strong>D: Posso contattarti anche nei weekend?</strong><br>R: Sì, sono disponibile ogni giorno.</p>
-  <p><strong>D: È un abbonamento vincolante?</strong><br>R: No, puoi disdire quando vuoi.</p>
-</section>
-
-<footer>
-  &copy; 2025 Servizio di Disponibilità Medica – Tutti i diritti riservati<br/>
-  <a href="privacy.html">Privacy</a> |
-  <a href="termini.html">Termini</a> |
-  <a href="cookie.html">Cookie</a>
-</footer>
-
-<div id="cookie-banner">
-  Questo sito utilizza cookie per migliorare l'esperienza utente. <a href="cookie.html" style="color:#aee;">Leggi di più</a>
-  <button onclick="acceptCookies()">Accetta</button>
-</div>
-
-<script>
-  function acceptCookies() {
-    localStorage.setItem("cookieAccepted", "true");
-    document.getElementById("cookie-banner").style.display = "none";
-  }
-
-  window.onload = function () {
-    if (!localStorage.getItem("cookieAccepted")) {
-      document.getElementById("cookie-banner").style.display = "block";
-    }
-  }
-</script>
-
+  <footer>
+    <p>
+      <a href="termini.html" style="color:white;">Termini di Servizio</a> |
+      <a href="privacy.html" style="color:white;">Privacy</a> |
+      <a href="cookie.html" style="color:white;">Cookie</a>
+    </p>
+    <p>&copy; 2025 Disponibilità Medica</p>
+  </footer>
 </body>
 </html>
