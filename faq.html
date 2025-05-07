@@ -3,20 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>FAQ</title>
+  <title>FAQ - Disponibilità Medica</title>
   <style>
     body {
       margin: 0;
       font-family: "Segoe UI", sans-serif;
-      background: linear-gradient(-45deg, #e0f7fa, #f1f8ff, #d0f0ff, #e8f9ff);
-      background-size: 400% 400%;
-      animation: gradientBG 15s ease infinite;
+      background-color: #f4fafd;
       color: #333;
-    }
-    @keyframes gradientBG {
-      0% {background-position: 0% 50%;}
-      50% {background-position: 100% 50%;}
-      100% {background-position: 0% 50%;}
     }
     header {
       background-color: #007acc;
@@ -28,18 +21,25 @@
       display: flex;
       justify-content: center;
       background-color: #005f99;
+      flex-wrap: wrap;
     }
     nav a {
       color: white;
       text-decoration: none;
       padding: 14px 20px;
-    }
-    nav a.active {
-      background-color: #003f66;
-      font-weight: bold;
+      display: inline-block;
     }
     nav a:hover {
       background-color: #004a73;
+    }
+    .email-icon {
+      display: inline-block;
+      margin-left: 10px;
+    }
+    .email-icon img {
+      vertical-align: middle;
+      width: 20px;
+      height: 20px;
     }
     .section {
       padding: 30px 20px;
@@ -51,38 +51,68 @@
       border-bottom: 2px solid #007acc;
       padding-bottom: 5px;
     }
+    ul {
+      padding-left: 20px;
+    }
     footer {
       background-color: #005f99;
       color: white;
       text-align: center;
       padding: 20px;
       margin-top: 40px;
+      font-size: 0.9em;
+    }
+    .whatsapp-float {
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      bottom: 80px;
+      right: 20px;
+      background-color: #25d366;
+      color: white;
+      border-radius: 50px;
+      text-align: center;
+      font-size: 30px;
+      box-shadow: 2px 2px 3px #999;
+      z-index: 100;
+    }
+    .whatsapp-float img {
+      margin-top: 15px;
+      width: 30px;
+      height: 30px;
     }
   </style>
 </head>
 <body>
 
 <header>
-  <h1>Domande Frequenti</h1>
+  <h1>Servizio di Disponibilità Medica</h1>
 </header>
 
 <nav>
+  <a href="index.html">Home</a>
   <a href="servizi.html">Servizi</a>
   <a href="vantaggi.html">Vantaggi</a>
-  <a href="faq.html" class="active">FAQ</a>
+  <a href="faq.html">FAQ</a>
   <a href="contatti.html">Contatti</a>
+  <a class="email-icon" href="mailto:ferriam78@gmail.com" title="Scrivi una mail">
+    <img src="https://img.icons8.com/ios-glyphs/30/ffffff/new-post.png" alt="Email">
+  </a>
 </nav>
 
 <section class="section">
-  <h2>FAQ</h2>
-  <p><strong>D: È un servizio vincolante?</strong><br>R: No, puoi interrompere l’abbonamento in qualsiasi momento.</p>
-  <p><strong>D: Posso scriverti anche nei giorni festivi?</strong><br>R: Sì, il servizio è attivo tutti i giorni.</p>
-  <p><strong>D: Sono previsti costi aggiuntivi?</strong><br>R: No, paghi solo 15€/mese.</p>
+  <h2>Domande Frequenti</h2>
+  <p><strong>D: Posso contattarti anche nei weekend?</strong><br>R: Sì, sono disponibile ogni giorno.</p>
+  <p><strong>D: È un abbonamento vincolante?</strong><br>R: No, puoi disdire quando vuoi.</p>
 </section>
 
 <footer>
   &copy; 2025 Servizio di Disponibilità Medica – Tutti i diritti riservati
 </footer>
+
+<a class="whatsapp-float" href="https://wa.me/393515503904" target="_blank" title="Chatta su WhatsApp">
+  <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png" alt="WhatsApp">
+</a>
 
 </body>
 </html>
