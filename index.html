@@ -1,4 +1,3 @@
-Ottimo: 
 <!DOCTYPE html>
 <html lang="it">
 <head>
@@ -22,6 +21,7 @@ Ottimo:
       display: flex;
       justify-content: center;
       background-color: #005f99;
+      flex-wrap: wrap;
     }
     nav a {
       color: white;
@@ -77,6 +77,15 @@ Ottimo:
       text-align: center;
       padding: 20px;
       margin-top: 40px;
+      font-size: 0.9em;
+    }
+    .footer-links {
+      margin-top: 10px;
+    }
+    .footer-links a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: underline;
     }
   </style>
 </head>
@@ -87,10 +96,11 @@ Ottimo:
 </header>
 
 <nav>
-  <a href="#">Servizi</a>
-  <a href="#">Vantaggi</a>
-  <a href="#">FAQ</a>
-  <a href="#">Contatti</a>
+  <a href="index.html">Home</a>
+  <a href="servizi.html">Servizi</a>
+  <a href="vantaggi.html">Vantaggi</a>
+  <a href="faq.html">FAQ</a>
+  <a href="contatti.html">Contatti</a>
 </nav>
 
 <section class="hero">
@@ -127,6 +137,11 @@ Ottimo:
 
 <footer>
   &copy; 2025 Servizio di Disponibilità Medica – Tutti i diritti riservati
+  <div class="footer-links">
+    <a href="termini.html">Termini di Servizio</a> |
+    <a href="privacy.html">Privacy Policy</a> |
+    <a href="cookie.html">Cookie Policy</a>
+  </div>
 </footer>
 
 </body>
