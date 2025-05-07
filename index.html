@@ -1,36 +1,63 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Disponibilità Medica</title>
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #4fc3f7, #1976d2);
+      background: linear-gradient(to bottom right, #007acc, #00c6ff);
       color: white;
       text-align: center;
     }
     header {
-      padding: 30px;
-      background-color: rgba(0, 0, 0, 0.2);
+      padding: 20px;
     }
     nav a {
       color: white;
+      margin: 0 15px;
       text-decoration: none;
-      margin: 15px;
       font-weight: bold;
     }
     nav a:hover {
       text-decoration: underline;
     }
-    section {
-      padding: 50px 20px;
+    .hero {
+      padding: 80px 20px;
+    }
+    .hero h1 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+    .hero p {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+    .whatsapp-btn {
+      background-color: #25d366;
+      border: none;
+      padding: 12px 24px;
+      font-size: 16px;
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      display: inline-block;
+      transition: background-color 0.3s ease;
+    }
+    .whatsapp-btn:hover {
+      background-color: #1ebe5d;
     }
     footer {
-      background-color: rgba(0, 0, 0, 0.2);
+      margin-top: 60px;
       padding: 20px;
       font-size: 14px;
+    }
+    footer a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: underline;
     }
   </style>
 </head>
@@ -46,18 +73,17 @@
     </nav>
   </header>
 
-  <section>
+  <div class="hero">
     <h2>Benvenuto nel tuo servizio medico sempre disponibile</h2>
     <p>Solo 15€/mese per avere un medico sempre a disposizione. Assistenza rapida, continua e ovunque tu sia.</p>
-  </section>
+    <a class="whatsapp-btn" href="https://wa.me/393515503904" target="_blank">Contattaci su WhatsApp</a>
+  </div>
 
   <footer>
-    <p>
-      <a href="termini.html" style="color:white;">Termini di Servizio</a> |
-      <a href="privacy.html" style="color:white;">Privacy</a> |
-      <a href="cookie.html" style="color:white;">Cookie</a>
-    </p>
-    <p>&copy; 2025 Disponibilità Medica</p>
+    <a href="termini.html">Termini di Servizio</a> |
+    <a href="privacy.html">Privacy</a> |
+    <a href="cookie.html">Cookie</a>
+    <p>© 2025 Disponibilità Medica</p>
   </footer>
 </body>
 </html>
